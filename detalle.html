@@ -128,99 +128,109 @@
         color: white !important;
     }
 
-    /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        /* Evitar el pequeño desplazamiento hacia abajo */
-        transition: 0.3s ease-in-out;
-        /* Transición suave */
-    }
+
 
     /**/
-    
-@media (max-width: 991px){
-    .section-about{
-      gap: 30px !important;
-    }
-    .img-about{
-      width: 86% !important;
-    }
-    .descript-about{
-      text-align: center;
-    
-    }
-  .info-header {
-    align-items: center  !important;
-    padding-inline: 31px  !important;
-    gap: 24px  !important;
-    font-size: 11px;
-    justify-content: center;
-  }
-  .redes-content {
-    display: none !important;
-  }
-}
 
-@media (max-width: 537px) {
-    .header-franja{
-      display: none !important;
-    }
-    .bg-body-tertiary{
-    padding-inline: 0px !important;
-  }
-  }
+    @media (max-width: 991px) {
+        .section-about {
+            gap: 30px !important;
+        }
 
+        .img-about {
+            width: 86% !important;
+        }
+
+        .descript-about {
+            text-align: center;
+
+        }
+
+        .info-header {
+            align-items: center !important;
+            padding-inline: 31px !important;
+            gap: 24px !important;
+            font-size: 11px;
+            justify-content: center;
+        }
+
+        .redes-content {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 537px) {
+        .header-franja {
+            display: none !important;
+        }
+
+        .bg-body-tertiary {
+            padding-inline: 0px !important;
+        }
+    }
 </style>
 <style>
     /* Efecto de background para las opciones del dropdown */
     .dropdown-menu .dropdown-item {
-      position: relative;
-      overflow: hidden;
-      transition: color 0.4s ease;
-      /* Transición de color para que coincida con el efecto de background */
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s ease;
+        /* Transición de color para que coincida con el efecto de background */
     }
-  
+
     .dropdown-menu .dropdown-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-color: #ff4a08c4;
-      /* Color de fondo completado */
-      transition: width 0.4s ease;
-      /* Suavidad al cambiar el ancho del fondo */
-      z-index: -1;
-      /* Poner el fondo detrás del texto */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ff4a08c4;
+        /* Color de fondo completado */
+        transition: width 0.4s ease;
+        /* Suavidad al cambiar el ancho del fondo */
+        z-index: -1;
+        /* Poner el fondo detrás del texto */
     }
-  
+
     .dropdown-menu .dropdown-item:hover::before {
-      width: 100%;
-      /* Al hacer hover, el fondo se llena (ancho al 100%) */
+        width: 100%;
+        /* Al hacer hover, el fondo se llena (ancho al 100%) */
     }
-  
+
     .dropdown-menu .dropdown-item:hover {
-      color: #fff;
-      /* Cambiar el color del texto mientras el fondo está lleno */
+        color: #fff;
+        /* Cambiar el color del texto mientras el fondo está lleno */
     }
-  
+
     .dropdown-menu .dropdown-item::before {
-      width: 0;
-      /* Inicialmente, el fondo no está lleno */
+        width: 0;
+        /* Inicialmente, el fondo no está lleno */
     }
-  
+
     .dropdown-menu .dropdown-item:hover::before {
-      width: 100%;
-      /* Se llena el fondo */
+        width: 100%;
+        /* Se llena el fondo */
     }
-  
+
     /* El fondo se reduce nuevamente al dejar de hacer hover */
     .dropdown-menu .dropdown-item {
-      transition: color 0.4s ease, background-color 0.4s ease;
+        transition: color 0.4s ease, background-color 0.4s ease;
     }
-  </style>
+
+    @media(min-width: 1021px) {
+
+        /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            /* Evitar el pequeño desplazamiento hacia abajo */
+            transition: 0.3s ease-in-out;
+            /* Transición suave */
+        }
+    }
+</style>
+
 <body>
     <div class="container">
         <div class="row header-franja"
@@ -273,13 +283,13 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#clientes">Clientes</a>
-                          </li>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link " href="proyectos.html">Proyectos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link "href="index.html#contacto" >Contacto</a>
-                          </li>
+                            <a class="nav-link " href="index.html#contacto">Contacto</a>
+                        </li>
 
                     </ul>
                 </div>
@@ -333,7 +343,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4" style=" padding: 30px; border: solid 1px gray;max-height: 550px;">              
+            <div class="col-lg-4" style=" padding: 30px; border: solid 1px gray;max-height: 550px;">
                 <div style="display: flex;justify-content: center;gap: 30px;" class="row">
                     <h2 class="" style="text-align: center; ">Información sobre el Proyecto</h2>
                     <div class="col-lg-12" style="gap: 20px;display: flex;flex-direction: column;">
@@ -357,8 +367,8 @@
                             <span style="width: 50%; text-align: center;">Ubicación</span>
                             <span style="width: 50%;text-align: center;">Trujillo, Perú</span>
                         </div>
-                        
-                    
+
+
                     </div>
                 </div>
             </div>

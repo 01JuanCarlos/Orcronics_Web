@@ -23,18 +23,11 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <!-- Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <!-- Bootstrap 5 CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
+  <!-- font awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -161,7 +154,7 @@
 </style>
 <style>
   body {
-    min-width: 375px;
+    min-width: 320px;
     background: rgb(0 0 0 / 97%) !important;
     margin: 0;
     position: relative;
@@ -264,14 +257,7 @@
     color: white !important;
   }
 
-  /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    /* Evitar el pequeño desplazamiento hacia abajo */
-    transition: 0.3s ease-in-out;
-    /* Transición suave */
-  }
+
 
   /*
   .arrow {
@@ -450,7 +436,7 @@
   }
 
   .valor {
-    width: 150px;
+    width: 134px;
   }
 
   /* .navbar-toggler{
@@ -509,6 +495,18 @@
 
     .swiper-container-miembros {
       display: block !important;
+    }
+  }
+
+  @media(min-width: 1021px) {
+
+    /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      /* Evitar el pequeño desplazamiento hacia abajo */
+      transition: 0.3s ease-in-out;
+      /* Transición suave */
     }
   }
 </style>
@@ -620,6 +618,20 @@
   .dropdown-menu .dropdown-item {
     transition: color 0.4s ease, background-color 0.4s ease;
   }
+
+  @media(max-width: 370px) {
+
+    .navbar-collapse {
+      overflow: hidden;
+    }
+
+    .dropdown {
+      width: 100%;
+    }
+
+  }
+   
+        
 </style>
 
 <body style="background-repeat: no-repeat;background-size: cover;  background-attachment: fixed;">
@@ -643,7 +655,7 @@
         <img src="LinkedIn.png" alt="">
       </div>
     </div>
- 
+
   </div>
   <div>
     <nav class=" container navbar navbar-expand-lg bg-body-tertiary">
@@ -661,19 +673,20 @@
             <li class="nav-item">
               <a class="nav-link" href="#nosotros">Nosotros</a>
             </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Servicios
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Configuracion y mantenimiento de Servidores</a></li>
-                <li><a class="dropdown-item" href="#">Instalacion de camaras de seguridad</a></li>
+                <li><a class="dropdown-item" href="#">Configuración y mantenimiento de Servidores</a></li>
+                <li><a class="dropdown-item" href="#">Instalación de cámaras de seguridad</a></li>
                 <li><a class="dropdown-item" href="#">Desarrollo y mantenimiento de Software</a></li>
-                <li><a class="dropdown-item" href="#">Posos a Tierra</a></li>
+                <li><a class="dropdown-item" href="#">Pozos a Tierra</a></li>
               </ul>
             </li>
-  
+
             <li class="nav-item">
               <a class="nav-link" href="#clientes">Clientes</a>
             </li>
@@ -683,7 +696,7 @@
             <li class="nav-item">
               <a class="nav-link " href="#contacto">Contacto</a>
             </li>
-  
+
           </ul>
         </div>
       </div>
@@ -1020,7 +1033,7 @@
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
+                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
                   <div>
                     <img src="mienbro.png" alt="" width="200px">
                   </div>
@@ -1039,7 +1052,7 @@
               </div>
               <!-- Slide 2 -->
               <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
+                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
                   <div>
                     <img src="mienbro.png" alt="" width="200px">
                   </div>
@@ -1058,7 +1071,7 @@
               </div>
               <!-- Slide 3 -->
               <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
+                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
                   <div>
                     <img src="mienbro.png" alt="" width="200px">
                   </div>
@@ -1077,7 +1090,7 @@
               </div>
               <!-- Slide 4 -->
               <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
+                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
                   <div>
                     <img src="mienbro.png" alt="" width="200px">
                   </div>
@@ -1096,7 +1109,7 @@
               </div>
               <!-- Slide 5 -->
               <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
+                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
                   <div>
                     <img src="mienbro.png" alt="" width="200px">
                   </div>
@@ -1115,7 +1128,7 @@
               </div>
               <!-- Slide 6 -->
               <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
+                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
                   <div>
                     <img src="mienbro.png" alt="" width="200px">
                   </div>
@@ -1134,7 +1147,7 @@
               </div>
               <!-- Slide 7 -->
               <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
+                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
                   <div>
                     <img src="mienbro.png" alt="" width="200px">
                   </div>
@@ -1155,7 +1168,7 @@
               <!-- Añade más slides si es necesario -->
             </div>
             <!-- Botones de navegación -->
-            <div style="padding: 22px;gap: 30px;display: flex;justify-content: flex-end;">
+            <div style="padding-top: 22px;gap: 30px;display: flex;justify-content: flex-end;">
               <div class="swiper-button-prev" style="position: relative !important;"></div>
               <div class="swiper-button-next" style="position: relative !important;"></div>
             </div>
@@ -1354,7 +1367,13 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap 5 js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <!-- Inicializar Swiper -->
   <script>
     var swiper = new Swiper('.swiper-container_clientes', {
@@ -1536,7 +1555,7 @@
   }
 
   .form-container {
-    padding: 20px;
+    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(26, 16, 16, 0.151);
     text-align: center;

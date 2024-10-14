@@ -41,6 +41,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <style>
+   @media(min-width: 1021px) {
+
+/* Hacer que el dropdown se muestre al pasar el ratón (hover) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  /* Evitar el pequeño desplazamiento hacia abajo */
+  transition: 0.3s ease-in-out;
+  /* Transición suave */
+}
+}
   body {
     min-width: 375px;
     background: rgb(0 0 0 / 97%) !important;
@@ -81,6 +92,7 @@
     background: #101010;
   }
 */
+
   .container {
     color: white;
   }
@@ -129,14 +141,7 @@
     color: white !important;
   }
 
-  /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    /* Evitar el pequeño desplazamiento hacia abajo */
-    transition: 0.3s ease-in-out;
-    /* Transición suave */
-  }
+
 </style>
 
 <style>
@@ -342,6 +347,18 @@ color: rgb(255 67 0) !important;
   .dropdown-menu .dropdown-item {
     transition: color 0.4s ease, background-color 0.4s ease;
   }
+  @media(max-width: 370px) {
+
+.navbar-collapse {
+  overflow: hidden;
+}
+
+.dropdown {
+  width: 100%;
+}
+
+
+}
 </style>
 <body>
   <div class="container">

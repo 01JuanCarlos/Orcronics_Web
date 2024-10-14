@@ -33,6 +33,7 @@
 
 </head>
 <style>
+  /*general*/
   body {
     min-width: 375px;
     background: rgb(0 0 0 / 97%) !important;
@@ -137,14 +138,7 @@
     color: white !important;
   }
 
-  /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    /* Evitar el pequeño desplazamiento hacia abajo */
-    transition: 0.3s ease-in-out;
-    /* Transición suave */
-  }
+
 
   /*
   .arrow {
@@ -384,6 +378,17 @@
       display: block !important;
     }
   }
+  @media(min-width: 1021px) {
+
+/* Hacer que el dropdown se muestre al pasar el ratón (hover) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  /* Evitar el pequeño desplazamiento hacia abajo */
+  transition: 0.3s ease-in-out;
+  /* Transición suave */
+}
+}
 </style>
 <style>
 
@@ -448,6 +453,11 @@ body {
     justify-content: flex-end;
   }
 
+  @media( max-width:991px){
+    .box-service{
+      border-right:0px !important;
+    }
+  }
 </style>
 <style>
   /* Efecto de background para las opciones del dropdown */
@@ -562,11 +572,11 @@ body {
         </nav>
       </div>
     <section class="container">
-        <div class="row" style="display: flex;justify-content: center;padding: 50px;    justify-content: space-evenly;">
+        <div class="row mt-5" style="display: flex;justify-content: center; justify-content: space-evenly;">
             <div class="col-lg-4" style="display: flex;justify-content: center;overflow: hidden;"><img src="serv1.png" alt=""></div>
             <div class="col-lg-6" style="display: flex;justify-content: center;justify-content: flex-start;flex-direction: column;gap: 30px;">
-                <div>
-                    <h2 style="font-size: 40px;">Telecomunicaciones y TI</h2>
+                <div class="mt-5">
+                    <h2 >Telecomunicaciones y TI</h2>
                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione, 
                     temporibus dolore repudiandae laudantium provident suscipit dolor aut.
                      Consectetur modi enim exercitationem sunt dolorem, quibusdam quas inventore 
@@ -585,26 +595,26 @@ body {
            
         </div>    
     </section>
-    <section class="container" style="padding: 50px;">
+    <section class="container mt-5" >
         <h2>Servicios especificos</h2>
         <br>
         <div class="row" style="align-items: center">
-           <div class="col-lg-4" style="padding: 20px;border-right: rgba(128, 128, 128, 0.349) solid 1px;">
+           <div class="col-lg-4 box-service" style="padding: 20px;border-right: rgba(128, 128, 128, 0.349) solid 1px;">
             <h6 style="color: #f54606;">Cableado y estructurado</h6>
             <span style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, rem perferendis deleniti sint iure, itaque labore veniam ea placeat voluptatem repellendus eaque libero voluptatibus culpa inventore corporis? Modi, amet placeat.</span>
            </div>
-           <div class="col-lg-4" style="padding: 20px;border-right: rgba(128, 128, 128, 0.349) solid 1px;">
+           <div class="col-lg-4 box-service" style="padding: 20px;border-right: rgba(128, 128, 128, 0.349) solid 1px;">
             <h6 style="color: #f54606;">Radionlaces</h6>
             <span style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, rem perferendis deleniti sint iure, itaque labore veniam ea placeat voluptatem repellendus eaque libero voluptatibus culpa inventore corporis? Modi, amet placeat.</span>
 
            </div>
           
-           <div class="col-lg-4" style="padding: 20px;">
+           <div class="col-lg-4 box-service" style="padding: 20px;">
             <h6 style="color: #f54606;">Fiobra Óptica</h6>
             <span style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, rem perferendis deleniti sint iure, itaque labore veniam ea placeat voluptatem repellendus eaque libero voluptatibus culpa inventore corporis? Modi, amet placeat.</span>
            </div>
            
-           <div class="col-lg-4" style="padding: 20px;">
+           <div class="col-lg-4 box-service" style="padding: 20px;">
             <h6 style="color: #f54606;">Desarrollo Electrónica</h6>
             <span style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, rem perferendis deleniti sint iure, itaque labore veniam ea placeat voluptatem repellendus eaque libero voluptatibus culpa inventore corporis? Modi, amet placeat.</span>
 
