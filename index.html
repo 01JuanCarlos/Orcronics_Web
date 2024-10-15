@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Orcronics</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
@@ -29,369 +28,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <!-- font awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
 
-<style>
-  body {
-    min-width: 320px;
-    background: rgb(0 0 0 / 97%) !important;
-    margin: 0;
-    position: relative;
-  }
-
-  body:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, #06111ed6 42%, #0a76fc14 100%);
-    z-index: -1;
-    /* Coloca el pseudo-elemento detrás del contenido del body */
-  }
-
-  .banner:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 322px;
-    height: 308px;
-    border-radius: 50%;
-    background: linear-gradient(260deg, #4594eb8a 0%, rgb(23 7 55 / 0%) 100%);
-    -webkit-filter: blur(150px);
-    filter: blur(150px);
-    margin-top: -5%;
-    z-index: -1;
-  }
-
-  .btn_contac_banner {
-    background: #241E2F;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 30px;
-    width: 170px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    transition: 300ms;
-  }
-
-  .btn_contac_banner:hover {
-    background: #32224d;
-  }
-
-  /*
-  body {
-    min-width:  375px;
-    background: #101010;
-  }
-*/
-  .container {
-    color: white;
-  }
-
-  /*Franja superior*/
-
-  /*Nav*/
-  .nav-item {
-    font-weight: 400;
-    color: white;
-  }
-
-  .bg-body-tertiary {
-    padding-inline: 60px;
-    background: none !important;
-  }
-
-  .nav-link {
-    color: white;
-  }
-
-  .navbar-nav {
-    text-align: center;
-    gap: 21px;
-  }
-
-  .collapse {
-    justify-content: flex-end;
-  }
-
-  .nav-link:focus {
-    color: #fd4a09 !important;
-  }
-
-  /*  .navbar {
-  --bs-navbar-active-color:#fd4a09 !important;
-  }*/
-  .dropdown-menu {
-    background: #0e1f33 !important;
-    --bs-dropdown-link-active-bg: #fc4909 !important;
-    --bs-dropdown-link-hover-bg: none !important;
-  }
-
-  .dropdown-menu li a {
-    color: white !important;
-  }
-
-
-
-  /*
-  .arrow {
-    z-index: 999;
-    margin: 10px;
-    position: absolute;
-    border-radius: 100%;
-    padding: 10px;
-    background: white;
-  }
-
-  .left {
-    right: 0;
-  }
-*/
-  .servicios {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .servicio {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: flex-end;
-    width: 100%;
-    height: 400px;
-    border-radius: 8px;
-  }
-
-  /*SLIDER */
-  /* .slider {
-    height: 600px;
-    margin-left: 0px;
-    margin-right: 0px;
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .img-slide {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-  }
-
-  .info-slider {
-    position: relative;
-    z-index: 999;
-  }
-
-  .title-c {
-    font-family: "Exo 2", sans-serif;
-    font-size: 60px;
-  }
-
-  .cont {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .slick-prev,
-  .slick-next {
-    font-size: 0;
-  }*
-
-  .slick-track {
-    height: 100%;
-  }
-
-  .draggable {
-    height: 100%;
-  }
-
-  .btn_contac {
-    background: orangered;
-    border-radius: 1px;
-    width: 200px;
-    text-align: center;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-*/
-  /*banner secundario*/
-  .reasons-section {
-    margin-top: 50px;
-
-    font-family: "Outfit", sans-serif;
-  }
-
-  .cont_glass {
-    /* background: url(glass.png);*/
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .content-container {
-    justify-content: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding-inline: 30px;
-    gap: 20px;
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .highlight-text {
-    color: #fd4a09;
-    font-weight: 400;
-    font-size: 20px;
-  }
-
-  .title-text {}
-
-  .description-text {
-    font-size: 14px;
-    font-weight: 100;
-    margin: 0;
-  }
-
-  .reason {
-    display: flex;
-    gap: 20px;
-  }
-
-  .icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .reason-text h4 {
-    margin: 0;
-  }
-
-  .reason-text span {
-    font-family: "Jost", sans-serif;
-    display: block;
-    margin-top: 5px;
-    font-weight: 200;
-    font-size: 14px;
-
-  }
-
-  .color-block {
-    height: 100%;
-
-  }
-
-  .valor {
-    width: 134px;
-  }
-
-  /* .navbar-toggler{
-    background-color: #fd4909; 
-   }*/
-  .navbar-toggler-icon {
-
-    background-image: url(menu_icon.png) !important;
-  }
-
-  .nav-link:hover {
-    color: rgb(255 67 0) !important;
-  }
-
-  @media (max-width: 537px) {
-    .header-franja {
-      display: none !important;
-    }
-
-    .bg-body-tertiary {
-      padding-inline: 0px !important;
-    }
-  }
-
-
-
-  @media (max-width: 991px) {
-    .section-about {
-      gap: 30px !important;
-    }
-
-    .img-about {
-      width: 86% !important;
-    }
-
-    .descript-about {
-      text-align: center;
-
-    }
-
-    .info-header {
-      align-items: center !important;
-      padding-inline: 31px !important;
-      gap: 24px !important;
-      font-size: 11px;
-      justify-content: center;
-    }
-
-    .redes-content {
-      display: none !important;
-    }
-
-    .container-miembros-1 {
-      display: none;
-    }
-
-    .swiper-container-miembros {
-      display: block !important;
-    }
-  }
-
-  @media(min-width: 1021px) {
-
-    /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
-    .dropdown:hover .dropdown-menu {
-      display: block;
-      margin-top: 0;
-      /* Evitar el pequeño desplazamiento hacia abajo */
-      transition: 0.3s ease-in-out;
-      /* Transición suave */
-    }
-  }
-</style>
-
+<!--Slier servicios-->
 <style>
   .swiper-container,
   .swiper-container-miembros {
@@ -415,7 +57,7 @@
     border-radius: 10px;
     max-width: 300px;
     height: 100%;
-    color: white;
+    
     display: flex;
     justify-content: flex-end;
     /* Ajusta la altura de las tarjetas */
@@ -439,6 +81,7 @@
   }
 
   .contenido-card {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -454,7 +97,7 @@
   .boroninfoservicio {
     border-radius: 3px;
     border: white solid 1px;
-    color: white;
+    
     text-decoration: none;
     text-align: start;
     padding: 5px;
@@ -514,6 +157,7 @@
   }
 </style>
 
+<!--Slier Clientes-->
 <style>
   /* Contenedor del slider */
   .slider-container {
@@ -575,75 +219,12 @@
   }
 </style>
 
-<style>
-  /* Efecto de background para las opciones del dropdown */
-  .dropdown-menu .dropdown-item {
-    position: relative;
-    overflow: hidden;
-    transition: color 0.4s ease;
-    /* Transición de color para que coincida con el efecto de background */
-  }
-
-  .dropdown-menu .dropdown-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #ff4a08c4;
-    /* Color de fondo completado */
-    transition: width 0.4s ease;
-    /* Suavidad al cambiar el ancho del fondo */
-    z-index: -1;
-    /* Poner el fondo detrás del texto */
-  }
-
-  .dropdown-menu .dropdown-item:hover::before {
-    width: 100%;
-    /* Al hacer hover, el fondo se llena (ancho al 100%) */
-  }
-
-  .dropdown-menu .dropdown-item:hover {
-    color: #fff;
-    /* Cambiar el color del texto mientras el fondo está lleno */
-  }
-
-  .dropdown-menu .dropdown-item::before {
-    width: 0;
-    /* Inicialmente, el fondo no está lleno */
-  }
-
-  .dropdown-menu .dropdown-item:hover::before {
-    width: 100%;
-    /* Se llena el fondo */
-  }
-
-  /* El fondo se reduce nuevamente al dejar de hacer hover */
-  .dropdown-menu .dropdown-item {
-    transition: color 0.4s ease, background-color 0.4s ease;
-  }
-
-  @media(max-width: 370px) {
-
-    .navbar-collapse {
-      overflow: hidden;
-    }
-
-    .dropdown {
-      width: 100%;
-    }
-
-  }
-   
-        
-</style>
 
 <body style="background-repeat: no-repeat;background-size: cover;  background-attachment: fixed;">
 
   <div class="container">
     <div class="row header-franja"
-      style="background: #B84B24;height: 60px;border-bottom-left-radius: 80px;border-bottom-right-radius: 80px; display: flex; flex-direction: column;justify-content: center;">
+      >
       <div style="display: flex; align-items: center;padding-inline: 50px;gap: 52px;" class="col-lg-10 info-header">
         <div style="    display: flex; align-items: center;"><img src="Call (1).png" alt=""><span>+51 854
             789-8746</span></div>
@@ -768,7 +349,7 @@
 
         </div>
 
-        <div class="col-lg-5 color-block " style=" color: white;  ">
+        <div class="col-lg-5 color-block " style="   ">
 
           <div>
             <img src="image 32 (6).png" style="width: 100%;height: 400px;" alt="">
@@ -799,7 +380,7 @@
             </div>
 -->
           <div id="ii"
-            style=" background: #B84B24;padding: 10px; display: flex; align-items: center; gap: 20px;justify-content: center;">
+            style=" background: #e3531f;padding: 10px; display: flex; align-items: center; gap: 20px;justify-content: center;color: white;">
             <span style=" font-size: 20px;">Buscas servicios eficientes para tu empresa?</span>
             <a class="btn_contac_banner" href="#contacto">Contactar</a>
           </div>
@@ -872,8 +453,8 @@
       </div>
     </section>
 
-    <section style="background: url(franja_naranja.png);width: 100%; color: white;padding: 60px; display: flex;flex-direction: column;text-align: center;gap: 20px;align-items: center;background-repeat: no-repeat;
-  background-size: cover;">
+    <section style="background: url(franja_naranja.png);width: 100%; padding: 60px; display: flex;flex-direction: column;text-align: center;gap: 20px;align-items: center;background-repeat: no-repeat;
+  background-size: cover;    color: white;">
       <p style="font-weight: 600;">Especialistas en conectividad</p>
       <h2>Impulsamos la innovación tecnológica a través de soluciones para mejorar la productividad de las empresas.
       </h2>
@@ -927,7 +508,7 @@
     </section>
 
     <section
-      style="display: flex;flex-direction: column;gap: 120px;justify-content: center; background-size: cover;color: white;"
+      style="display: flex;flex-direction: column;gap: 120px;justify-content: center; background-size: cover;"
       class="container">
       <section style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
         <h2 style="padding: 10px;    margin-bottom: 30px;
@@ -937,29 +518,29 @@
         </p>
         <div class="row container" style="display: flex; justify-content: center;">
           <div class="valor"
-            style="color:rgb(255, 255, 255);display: flex;align-items: center; justify-content: center; flex-direction: column;">
+            style="display: flex;align-items: center; justify-content: center; flex-direction: column;">
             <img src="valoresIcon_1.png" alt="">
             <p>Puntualidad</p>
           </div>
           <div class="valor"
-            style="color:rgb(255, 255, 255);display: flex;align-items: center; justify-content: center; flex-direction: column;">
+            style="display: flex;align-items: center; justify-content: center; flex-direction: column;">
             <img src="valoresIcon_2.png" alt="">
             <p>Honestidad</p>
           </div>
           <div class="valor"
-            style="color:rgb(255, 255, 255);display: flex;align-items: center; justify-content: center; flex-direction: column;">
+            style="display: flex;align-items: center; justify-content: center; flex-direction: column;">
             <img src="valoresIcon_3.png" alt="">
             <p>Innovación</p>
           </div>
           <div class="valor"
-            style="color:rgb(255, 255, 255);display: flex;align-items: center; justify-content: center; flex-direction: column;">
+            style="display: flex;align-items: center; justify-content: center; flex-direction: column;">
             <img src="valoresIcon_4.png" alt="">
             <p>Pro-actividad</p>
           </div>
         </div>
       </section>
 
-      <section style="color: white; align-items: center;display: flex;flex-direction: column;justify-content: center;"
+      <section style=" align-items: center;display: flex;flex-direction: column;justify-content: center;"
         class="container">
         <h2 style="padding: 10px;    margin-bottom: 30px;
           border-bottom: #ff4400 solid;text-align: center;">Miembros del equipo de Orcronics</h2>
@@ -1274,7 +855,7 @@
 
     </section>
 
-    <section id="contacto" style=" color: white;">
+    <section id="contacto" style=" ">
       <div class="box-master">
         <a type="hidden" href="mailto:juan29developer@gmail.com" id="i0f9g" class="link"> </a>
         <div class="row sub-box col-lg-9
@@ -1322,7 +903,7 @@
                   display: flex;
                   border: none;
                   padding: 7px;
-                  color: white;
+                  
                   width: 130px;
                   gap: 1px;
                   align-items: center;
@@ -1560,7 +1141,6 @@
   }
 
   .form-container {
-    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(26, 16, 16, 0.151);
     text-align: center;
@@ -1628,7 +1208,7 @@
 
   .btn_mas:hover {
     background-color: #333333;
-    color: white;
+    
 
   }
 
