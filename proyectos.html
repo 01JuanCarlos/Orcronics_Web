@@ -41,9 +41,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <style>
-  /*general*/
   body {
-    min-width: 375px;
+    min-width: 320px;
     background: rgb(0 0 0 / 97%) !important;
     margin: 0;
     position: relative;
@@ -325,7 +324,7 @@
   }
 
   .valor {
-    width: 150px;
+    width: 134px;
   }
 
   /* .navbar-toggler{
@@ -386,17 +385,18 @@
       display: block !important;
     }
   }
+
   @media(min-width: 1021px) {
 
-/* Hacer que el dropdown se muestre al pasar el ratón (hover) */
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-  /* Evitar el pequeño desplazamiento hacia abajo */
-  transition: 0.3s ease-in-out;
-  /* Transición suave */
-}
-}
+    /* Hacer que el dropdown se muestre al pasar el ratón (hover) */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      /* Evitar el pequeño desplazamiento hacia abajo */
+      transition: 0.3s ease-in-out;
+      /* Transición suave */
+    }
+  }
 </style>
 
 
@@ -655,11 +655,11 @@
         <div style="    display: flex; align-items: center;"><img src="Call (1).png" alt=""><span>+51 854
             789-8746</span></div>
         <div style="    display: flex;
-            gap: 8px;
-            align-items: center;"><img src="Clock.png" alt=""><span>Lun - Sab 9:00Am - 9:00Pm</span></div>
+          gap: 8px;
+          align-items: center;"><img src="Clock.png" alt=""><span>Lun - Sab 9:00Am - 9:00Pm</span></div>
         <div style="    display: flex;
-            gap: 8px;
-            align-items: center;"><img src="Envelope.png" alt=""><span>Orcronics@gmail.com</span></div>
+          gap: 8px;
+          align-items: center;"><img src="Envelope.png" alt=""><span>Orcronics@gmail.com</span></div>
       </div>
       <div style="display: flex; align-items: center;" class="redes-content col-lg-2">
         <img src="Facebook F.png" alt="">
@@ -667,7 +667,10 @@
         <img src="LinkedIn.png" alt="">
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+  </div>
+  <div>
+    <nav class=" container navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="LOGO.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -680,29 +683,30 @@
               <a class="nav-link" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#nosotros">Nosotros</a>
+              <a class="nav-link" href="#nosotros">Nosotros</a>
             </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Servicios
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Configuracion y mantenimiento de Servidores</a></li>
-                <li><a class="dropdown-item" href="#">Instalacion de camaras de seguridad</a></li>
+                <li><a class="dropdown-item" href="#">Configuración y mantenimiento de Servidores</a></li>
+                <li><a class="dropdown-item" href="#">Instalación de cámaras de seguridad</a></li>
                 <li><a class="dropdown-item" href="#">Desarrollo y mantenimiento de Software</a></li>
-                <li><a class="dropdown-item" href="#">Posos a Tierra</a></li>
+                <li><a class="dropdown-item" href="#">Pozos a Tierra</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="index.html#clientes">Clientes</a>
+              <a class="nav-link" href="#clientes">Clientes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="proyectos.html">Proyectos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="index.html#contacto">Contacto</a>
+              <a class="nav-link " href="#contacto">Contacto</a>
             </li>
 
           </ul>
@@ -710,6 +714,7 @@
       </div>
     </nav>
   </div>
+
 
   <section class="container" style="margin-top: 50px;margin-bottom: 50px;">
     <h2 style="border-bottom: solid orangered; padding-bottom: 20px; text-align: center;">Nuestro Proyectos</h2>
