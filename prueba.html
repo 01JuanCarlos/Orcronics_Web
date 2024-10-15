@@ -1,382 +1,140 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swiper dentro de Bootstrap</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-</head>
-<style>
-    body {
-        background: black;
-        color:white;
-    }
-
-    .swiper-container-miembros {
-        overflow-x: clip;
-        width: 100%;
-        height: 400px;
-    }
-
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 200ms;
-    }
-
-    .card {
-        cursor: pointer;
-        background: url(serv1.png);
-        padding: 20px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        border-radius: 10px;
-        max-width: 300px;
-        height: 100%;
-        color: white;
-        display: flex;
-        justify-content: flex-end;
-        /* Ajusta la altura de las tarjetas */
-    }
-
-
-
-    /*servicions card*/
-    /* Estilos iniciales de la carta */
-    .card {
-        width: 300px;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-        /* Aplica el zoom (ajusta el valor según lo que prefieras) */
-    }
-
-    .contenido-card {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-    }
-
-    .contenido-card h3 {
-        text-align: left;
-        margin-bottom: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .boroninfoservicio {
-        border-radius: 3px;
-        border: white solid 1px;
-        color: white;
-        text-decoration: none;
-        text-align: start;
-        padding: 5px;
-    }
-
-    .parrafo-service {
-        opacity: 0;
-        transform: translateY(20px);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-        pointer-events: none;
-        /* No permite que el hover lo afecte si está oculto */
-    }
-
-
-
-    .card:hover .parrafo-service {
-        opacity: 1;
-        transform: translateY(0);
-        max-height: 100px;
-    }
-
-    /*end*/
-
-    .swiper-button-next {
-        background-image: url('/icons8-derecha-en-círculo-2-100.png');
-        /* URL de tu imagen */
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 50px;
-        height: 50px;
-    }
-
-    .swiper-button-prev {
-        background-image: url('/icons8-izquierda-en-círculo-2-100.png');
-        /* URL de tu imagen */
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 50px;
-        height: 50px;
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-        content: '';
-        /* Oculta los íconos predeterminados */
-    }
-
-    @media (max-width: 537px) {}
-
-    @media (max-width: 425px) {
-        .miembro{
-            flex-direction: column;
-        }
-    }
-</style>
-
-<body>
-
-    <div class="container mt-5">
-
-        <div class="swiper-container-miembros">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
-                        <div>
-                            <img src="mienbro.png" alt="" width="200px">
-                        </div>
-                        <div>
-                            <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                            <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                                architecto aspernatur ab </p>
-                            <div>
-                                <img src="Instagram_2.png" alt="">
-                                <img src="LinkedIn 2.png" alt="">
-                                <img src="TwitterX.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
-                        <div>
-                            <img src="mienbro.png" alt="" width="200px">
-                        </div>
-                        <div>
-                            <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                            <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                                architecto aspernatur ab </p>
-                            <div>
-                                <img src="Instagram_2.png" alt="">
-                                <img src="LinkedIn 2.png" alt="">
-                                <img src="TwitterX.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
-                        <div>
-                            <img src="mienbro.png" alt="" width="200px">
-                        </div>
-                        <div>
-                            <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                            <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                                architecto aspernatur ab </p>
-                            <div>
-                                <img src="Instagram_2.png" alt="">
-                                <img src="LinkedIn 2.png" alt="">
-                                <img src="TwitterX.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
-                        <div>
-                            <img src="mienbro.png" alt="" width="200px">
-                        </div>
-                        <div>
-                            <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                            <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                                architecto aspernatur ab </p>
-                            <div>
-                                <img src="Instagram_2.png" alt="">
-                                <img src="LinkedIn 2.png" alt="">
-                                <img src="TwitterX.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 5 -->
-                <div class="swiper-slide">
-                    <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
-                        <div>
-                            <img src="mienbro.png" alt="" width="200px">
-                        </div>
-                        <div>
-                            <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                            <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                                architecto aspernatur ab </p>
-                            <div>
-                                <img src="Instagram_2.png" alt="">
-                                <img src="LinkedIn 2.png" alt="">
-                                <img src="TwitterX.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 6 -->
-                <div class="swiper-slide">
-                    <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
-                        <div>
-                            <img src="mienbro.png" alt="" width="200px">
-                        </div>
-                        <div>
-                            <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                            <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                                architecto aspernatur ab </p>
-                            <div>
-                                <img src="Instagram_2.png" alt="">
-                                <img src="LinkedIn 2.png" alt="">
-                                <img src="TwitterX.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 7 -->
-                <div class="swiper-slide">
-                    <div class="miembro" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
-                        <div>
-                            <img src="mienbro.png" alt="" width="200px">
-                        </div>
-                        <div>
-                            <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                            <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                                architecto aspernatur ab </p>
-                            <div>
-                                <img src="Instagram_2.png" alt="">
-                                <img src="LinkedIn 2.png" alt="">
-                                <img src="TwitterX.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Añade más slides si es necesario -->
-            </div>
-            <!-- Botones de navegación -->
-            <div style="padding: 22px;gap: 30px;display: flex;justify-content: flex-end;">
-                <div class="swiper-button-prev" style="position: relative !important;"></div>
-                <div class="swiper-button-next" style="position: relative !important;"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS, Popper.js y jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper('.swiper-container-miembros', {
-            slidesPerView: 4, // Valor por defecto para pantallas grandes
-            spaceBetween: 30, // Espacio entre las slides
-            freeMode: true,   // Habilitar el modo de desplazamiento libre
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            mousewheel: true,  // Habilitar desplazamiento con la rueda del ratón
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                hide: false,
-            },
-            // Configuración de breakpoints
-            breakpoints: {
-                100: {
-                    slidesPerView: 1, // Mostrar 1.5 slides en pantallas más pequeñas
-                },
-                // cuando la pantalla sea mayor o igual a 537px
-                320: {
-                    slidesPerView: 1, // Mostrar 1.5 slides en pantallas más pequeñas
-                },
-                440: {
-                    slidesPerView: 1, // Mostrar 1.5 slides en pantallas más pequeñas
-                },
-                500: {
-                    slidesPerView: 1, // Mostrar 1.5 slides en pantallas más pequeñas
-                },
-                // cuando la pantalla sea mayor o igual a 991px
-                991: {
-                    slidesPerView: 1.5, // Mostrar 3 slides en pantallas medianas
-                },
-                1000: {
-                    slidesPerView: 2,
-                }
-
-            }
-        });
-
-
-    </script>
-
-</body>
-
-</html>
-
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Dropdown Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambiar de Tema</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Servicios
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Configuración y mantenimiento de Servidores</a></li>
-                            <li><a class="dropdown-item" href="#">Instalación de cámaras de seguridad</a></li>
-                            <li><a class="dropdown-item" href="#">Desarrollo y mantenimiento de Software</a></li>
-                            <li><a class="dropdown-item" href="#">Pozos a Tierra</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<style>
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    <!-- Bootstrap JS (sin jQuery) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+/* Definición de variables del tema claro (por defecto) */
+:root {
+  --background-color: #ffffff;
+  --primary-color: #000000;
+  --secondary-color: #4a4a4a;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+  --background-color: #1a1a1a;
+  --primary-color: #ffffff;
+  --secondary-color: #aaaaaa;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+/* Estilos para el switch */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Estilos para el slider */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+</style>
+<body>
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="theme-toggle">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <p>Modo Oscuro</p>
+  </div>
+
+  <h1>Hola, Mundo</h1>
+  <p>Este es un ejemplo de cómo cambiar entre temas claro y oscuro.</p>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleSwitch = document.getElementById('theme-toggle');
+  
+    // Cargar el tema guardado si existe
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-theme');
+      toggleSwitch.checked = true;
+    }
+  
+    // Escuchar el cambio del switch
+    toggleSwitch.addEventListener('change', () => {
+      if (toggleSwitch.checked) {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark'); // Guardar la preferencia en localStorage
+      } else {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  });
+  </script>
 </body>
 </html>

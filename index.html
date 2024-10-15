@@ -57,7 +57,7 @@
     border-radius: 10px;
     max-width: 300px;
     height: 100%;
-    
+
     display: flex;
     justify-content: flex-end;
     /* Ajusta la altura de las tarjetas */
@@ -97,7 +97,7 @@
   .boroninfoservicio {
     border-radius: 3px;
     border: white solid 1px;
-    
+
     text-decoration: none;
     text-align: start;
     padding: 5px;
@@ -157,7 +157,7 @@
   }
 </style>
 
-<!--Slier Clientes-->
+<!--Slider Clientes-->
 <style>
   /* Contenedor del slider */
   .slider-container {
@@ -223,9 +223,8 @@
 <body style="background-repeat: no-repeat;background-size: cover;  background-attachment: fixed;">
 
   <div class="container">
-    <div class="row header-franja"
-      >
-      <div style="display: flex; align-items: center;padding-inline: 50px;gap: 52px;" class="col-lg-10 info-header">
+    <div class="row header-franja">
+      <div style="display: flex; align-items: center;padding-inline: 50px;gap: 52px;" class="col-lg-9 info-header">
         <div style="    display: flex; align-items: center;"><img src="Call (1).png" alt=""><span>+51 854
             789-8746</span></div>
         <div style="    display: flex;
@@ -235,14 +234,23 @@
           gap: 8px;
           align-items: center;"><img src="Envelope.png" alt=""><span>Orcronics@gmail.com</span></div>
       </div>
-      <div style="display: flex; align-items: center;" class="redes-content col-lg-2">
+      <div style="display: flex; align-items: center;    justify-content: flex-end;" class="redes-content col-lg-2">
         <img src="Facebook F.png" alt="">
         <img src="Instagram.png" alt="">
         <img src="LinkedIn.png" alt="">
       </div>
+      <div class="theme-switch-wrapper col-lg-1" style="width: auto;
+    padding: 26px;">
+        <label class="theme-switch" for="theme-toggle">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
     </div>
 
   </div>
+
+  
   <div>
     <nav class=" container navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -401,8 +409,8 @@
               <div class="card" style="background: url(serv1.png);">
                 <div class="contenido-card">
                   <h3>Tottenham Hotspur Stadium</h3>
-                  <p class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
-                    energética...</p>
+                  <span class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
+                    energética...</span>
                   <a class="boroninfoservicio" href="servicio_1.html">Más información</a>
                 </div>
               </div>
@@ -413,8 +421,8 @@
               <div class="card" style="background: url(serv2.png);">
                 <div class="contenido-card">
                   <h3>Tottenham Hotspur Stadium</h3>
-                  <p class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
-                    energética...</p>
+                  <span class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
+                    energética...</span>
                   <a class="boroninfoservicio" href="servicio_1.html">Más información</a>
                 </div>
               </div>
@@ -424,8 +432,8 @@
               <div class="card" style="background: url(serv3.png);">
                 <div class="contenido-card">
                   <h3>Tottenham Hotspur Stadium</h3>
-                  <p class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
-                    energética...</p>
+                  <span class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
+                    energética...</span>
                   <a class="boroninfoservicio" href="servicio_1.html">Más información</a>
                 </div>
               </div>
@@ -435,8 +443,8 @@
               <div class="card" style="background: url(serv4.png);">
                 <div class="contenido-card">
                   <h3>Tottenham Hotspur Stadium</h3>
-                  <p class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
-                    energética...</p>
+                  <span class="parrafo-service">Apostando por la sostenibilidad como proveedor oficial de gestión
+                    energética...</span>
                   <a class="boroninfoservicio" href="servicio_1.html">Más información</a>
                 </div>
               </div>
@@ -455,7 +463,7 @@
 
     <section style="background: url(franja_naranja.png);width: 100%; padding: 60px; display: flex;flex-direction: column;text-align: center;gap: 20px;align-items: center;background-repeat: no-repeat;
   background-size: cover;    color: white;">
-      <p style="font-weight: 600;">Especialistas en conectividad</p>
+      <span style="font-weight: 600;">Especialistas en conectividad</span>
       <h2>Impulsamos la innovación tecnológica a través de soluciones para mejorar la productividad de las empresas.
       </h2>
       <a href="#contacto"
@@ -507,8 +515,7 @@
       </div>
     </section>
 
-    <section
-      style="display: flex;flex-direction: column;gap: 120px;justify-content: center; background-size: cover;"
+    <section style="display: flex;flex-direction: column;gap: 120px;justify-content: center; background-size: cover;"
       class="container">
       <section style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
         <h2 style="padding: 10px;    margin-bottom: 30px;
@@ -1076,7 +1083,30 @@
 
   </script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleSwitch = document.getElementById('theme-toggle');
 
+      // Cargar el tema guardado si existe
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        toggleSwitch.checked = true;
+      }
+
+      // Escuchar el cambio del switch
+      toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+          document.body.classList.add('dark-theme');
+          localStorage.setItem('theme', 'dark'); // Guardar la preferencia en localStorage
+        } else {
+          document.body.classList.remove('dark-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+
+  </script>
 
 </body>
 
@@ -1208,7 +1238,7 @@
 
   .btn_mas:hover {
     background-color: #333333;
-    
+
 
   }
 
