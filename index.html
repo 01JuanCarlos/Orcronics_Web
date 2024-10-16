@@ -250,7 +250,7 @@
 
   </div>
 
-  
+
   <div>
     <nav class=" container navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -297,7 +297,7 @@
     </nav>
   </div>
 
-  <div class="banner" style="display: flex; flex-direction: column;gap: 120px;">
+  <div class="banner" style="display: flex; flex-direction: column;">
 
     <section class="reasons-section container">
       <div class="cont_glass row" style="display: flex;gap: 30px;">
@@ -360,7 +360,7 @@
         <div class="col-lg-5 color-block " style="   ">
 
           <div>
-            <img src="image 32 (6).png" style="width: 100%;height: 400px;" alt="">
+            <img src="image 32 (6).png" style="width: 100%;" alt="">
           </div>
           <!-- 
             <div class="container container-custom ">
@@ -396,12 +396,14 @@
       </div>
     </section>
 
-    <section class="container servicios" style="">
+    <section class="container servicios" style="margin-bottom: 30px;">
       <h2 style="border-bottom: solid orangered; padding-bottom: 20px; text-align: center;">Servicios que ofrecemos a
         las empresas del sector
         de las telecomunicaciones</h2>
-      <div class="container">
+    </section>
 
+    <div style="width: 100%;display: flex;align-items: center; justify-content: center;">
+      <div class="" style="overflow: hidden;max-width:1320px;">
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -459,9 +461,9 @@
           <div class="swiper-button-next" style="position: relative !important;"></div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section style="background: url(franja_naranja.png);width: 100%; padding: 60px; display: flex;flex-direction: column;text-align: center;gap: 20px;align-items: center;background-repeat: no-repeat;
+    <section style="background: url(franja_naranja.png);width: 100%; padding: 60px; display: flex;flex-direction: column;text-align: center;gap: 20px;align-items: center;background-repeat: no-repeat; margin-bottom: 50px;
   background-size: cover;    color: white;">
       <span style="font-weight: 600;">Especialistas en conectividad</span>
       <h2>Impulsamos la innovación tecnológica a través de soluciones para mejorar la productividad de las empresas.
@@ -471,7 +473,7 @@
         información <img src="Left Arrow_black.png" alt=""></a>
     </section>
 
-    <section class="container about" style="padding-top: 50px;" id="nosotros">
+    <section class="container about" style=" margin-bottom: 50px;" id="nosotros">
       <div class="row  section-about" style="gap:10px; justify-content: center;">
         <div class="col-lg-4 col-md-5" style="justify-content: center;display: flex;">
           <img class="img-about" src="about.png" style="width: 100%;" alt="">
@@ -515,9 +517,9 @@
       </div>
     </section>
 
-    <section style="display: flex;flex-direction: column;gap: 120px;justify-content: center; background-size: cover;"
+    <section style="display: flex;flex-direction: column;justify-content: center; background-size: cover;"
       class="container">
-      <section style="display: flex;flex-direction: column; justify-content: center; align-items: center;">
+      <section style="display: flex;flex-direction: column; justify-content: center; align-items: center; margin-bottom: 50px;">
         <h2 style="padding: 10px;    margin-bottom: 30px;
         border-bottom: #ff4400 solid;text-align: center;">Nuestros Valores</h2>
         <p style="text-align: center;">Aqui presentamos nuestros valores los cuales son reflejo de nuestro personal y
@@ -547,7 +549,7 @@
         </div>
       </section>
 
-      <section style=" align-items: center;display: flex;flex-direction: column;justify-content: center;"
+      <section style=" align-items: center;display: flex;flex-direction: column;justify-content: center;margin-bottom: 50px;"
         class="container">
         <h2 style="padding: 10px;    margin-bottom: 30px;
           border-bottom: #ff4400 solid;text-align: center;">Miembros del equipo de Orcronics</h2>
@@ -774,7 +776,7 @@
 
 
 
-      <section style="display: flex;flex-direction: column; justify-content: center; align-items: center; gap: 30px;    padding-top: 50px;
+      <section style="display: flex;flex-direction: column; justify-content: center; align-items: center; gap: 30px;    margin-bottom: 50px;
            padding-bottom: 50px;" id="clientes">
         <h2 style="padding: 10px;border-bottom: #ff4400 solid;text-align: center;">Nuestros Clientes nos Respaldan</h2>
         <div class="container">
@@ -932,6 +934,7 @@
 
   <footer style="height: 500px; background-color: #241E2F;">
 
+    <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
 
 
   </footer>
@@ -1108,6 +1111,26 @@
 
   </script>
 
+<script>
+  // Mostrar el botón cuando se desplaza hacia abajo
+window.onscroll = function() {
+  var scrollBtn = document.getElementById("scrollTopBtn");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block"; // Mostrar botón
+  } else {
+    scrollBtn.style.display = "none"; // Ocultar botón
+  }
+};
+
+// Función para volver arriba de la página
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Suaviza el desplazamiento
+  });
+}
+
+</script>
 </body>
 
 </html>
