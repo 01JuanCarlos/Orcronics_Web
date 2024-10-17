@@ -659,6 +659,7 @@ input:checked+.slider:before {
 
 @media(max-width: 1140px) {
   .theme-switch-wrapper {
+    
     display: none !important;
   }
 }
@@ -720,7 +721,8 @@ input:checked+.slider:before {
 
 
 
-
+@media(min-width:900px){
+  
 
 .element {
   overflow: hidden;
@@ -754,10 +756,7 @@ input:checked+.slider:before {
   transform: translateY(100%); /* Posición inicial fuera del viewport, hacia abajo */
 }
 
-/* Efecto Show */
-.show {
-  transform: scale(0); /* Escala inicial en 0 */
-}
+
 
 /* Al entrar en el viewport, se aplican las transformaciones */
 .element.in-view .sec1 {
@@ -773,6 +772,4 @@ input:checked+.slider:before {
   transform: translateY(0); /* Volver a su posición original */
 }
 
-.element.in-view .show {
-  transform: scale(1); /* Volver a su tamaño original */
 }
