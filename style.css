@@ -309,7 +309,83 @@ body:before {
   color: #fd4909 !important;
 }
 
+.box-naranja {
+  background: url(franja_naranja.png);
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  align-items: center;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  background-size: cover;
+  color: white;
+}
+
+.equipo-slider {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
+}
+
+
+.fade-out {
+  position: absolute;
+  z-index: 1;
+}
+
+.fade-out.left,
+.fade-out.right {
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Ajusta según necesites */
+}
+
+.fade-out.left {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.fade-out.right {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.fade-out.top,
+.fade-out.bottom {
+  left: 0;
+  right: 0;
+  height: 50px; /* Ajusta según necesites */
+}
+
+.fade-out.top {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.fade-out.bottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+
+.swiper-button-prev, .swiper-button-next{
+  filter: var(--ms-filter);
+}
+
 @media (max-width: 537px) {
+  .equipo-slider{
+  
+  }
+  .box-naranja {
+    padding: 30px;
+  }
+
   .header-franja {
     display: none !important;
   }
@@ -360,7 +436,7 @@ body:before {
     display: none;
   }
 
-  .swiper-container-miembros {
+  .equipo-slider {
     display: block !important;
   }
 }
@@ -475,12 +551,14 @@ body {
   transition: background-color 0.3s, color 0.3s;
 
 }
+
 /* Definición de variables del tema claro (por defecto) */
 :root {
   --background-image: url('bg_blanck3.png');
   --background-color: #ffffff;
   --primary-color: #000000;
   --secondary-color: #000000;
+  --ms-filter: invert(100%) brightness(0%);
 }
 
 /* Tema oscuro */
@@ -489,6 +567,7 @@ body.dark-theme {
   --background-color: #0a081af2;
   --primary-color: #ffffff;
   --secondary-color: #ffffff;
+  --ms-filter:none;
 }
 
 body {
@@ -584,23 +663,36 @@ input:checked+.slider:before {
 
 /*btn footer*/
 #scrollTopBtn {
-  position: fixed; /* Fijo en la pantalla */
-  bottom: 20px; /* Separación desde abajo */
-  right: 20px; /* Separación desde la derecha */
-  display: none; /* Oculto por defecto */
-  background-color: #fd4909; /* Color de fondo */
-  color: white; /* Color de texto */
-  border: none; /* Sin borde */
-  padding: 10px; /* Relleno del botón */
-  font-size: 18px; /* Tamaño del texto */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor a un puntero */
-  z-index: 100; /* Asegura que el botón esté por encima de otros elementos */
+  position: fixed;
+  /* Fijo en la pantalla */
+  bottom: 20px;
+  /* Separación desde abajo */
+  right: 20px;
+  /* Separación desde la derecha */
+  display: none;
+  /* Oculto por defecto */
+  background-color: #fd4909;
+  /* Color de fondo */
+  color: white;
+  /* Color de texto */
+  border: none;
+  /* Sin borde */
+  padding: 10px;
+  /* Relleno del botón */
+  font-size: 18px;
+  /* Tamaño del texto */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor a un puntero */
+  z-index: 100;
+  /* Asegura que el botón esté por encima de otros elementos */
   border-radius: 50%;
   width: 50px;
   height: 50px;
 }
 
 #scrollTopBtn:hover {
-  background-color: #555; /* Color al pasar el ratón por encima */
+  background-color: #555;
+  /* Color al pasar el ratón por encima */
 }

@@ -35,13 +35,15 @@
 
 <!--Slier servicios-->
 <style>
-  .swiper-container,
-  .swiper-container-miembros {
+  .swiper-container {
     overflow-x: clip;
     width: 100%;
     height: 400px;
   }
-
+  .swiper-container-miembros{
+    overflow-x: clip;
+    width: 100%;
+  }
   .swiper-slide {
     display: flex;
     justify-content: center;
@@ -396,14 +398,14 @@
       </div>
     </section>
 
-    <section class="container servicios" style="margin-bottom: 30px;">
+    <section class="container servicios" style="">
       <h2 style="border-bottom: solid orangered; padding-bottom: 20px; text-align: center;">Servicios que ofrecemos a
         las empresas del sector
         de las telecomunicaciones</h2>
     </section>
 
     <div style="width: 100%;display: flex;align-items: center; justify-content: center;">
-      <div class="" style="overflow: hidden;max-width:1320px;">
+      <div class="" style="padding-top: 50px;overflow: hidden;max-width:1320px;">
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -463,8 +465,7 @@
       </div>
     </div>
 
-    <section style="background: url(franja_naranja.png);width: 100%; padding: 60px; display: flex;flex-direction: column;text-align: center;gap: 20px;align-items: center;background-repeat: no-repeat; margin-bottom: 50px;
-  background-size: cover;    color: white;">
+    <section class="box-naranja">
       <span style="font-weight: 600;">Especialistas en conectividad</span>
       <h2>Impulsamos la innovación tecnológica a través de soluciones para mejorar la productividad de las empresas.
       </h2>
@@ -519,7 +520,9 @@
 
     <section style="display: flex;flex-direction: column;justify-content: center; background-size: cover;"
       class="container">
-      <section style="display: flex;flex-direction: column; justify-content: center; align-items: center; margin-bottom: 50px;">
+
+      <section
+        style="display: flex;flex-direction: column; justify-content: center; align-items: center; margin-bottom: 50px;">
         <h2 style="padding: 10px;    margin-bottom: 30px;
         border-bottom: #ff4400 solid;text-align: center;">Nuestros Valores</h2>
         <p style="text-align: center;">Aqui presentamos nuestros valores los cuales son reflejo de nuestro personal y
@@ -549,12 +552,11 @@
         </div>
       </section>
 
-      <section style=" align-items: center;display: flex;flex-direction: column;justify-content: center;margin-bottom: 50px;"
+      <section
+        style=" align-items: center;display: flex;flex-direction: column;justify-content: center;margin-bottom: 50px;"
         class="container">
         <h2 style="padding: 10px;    margin-bottom: 30px;
           border-bottom: #ff4400 solid;text-align: center;">Miembros del equipo de Orcronics</h2>
-
-
         <div class="row container-miembros-1" style="gap: 0px;">
           <div class="miembro col-lg-6" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
             <div>
@@ -621,248 +623,250 @@
             </div>
           </div>
         </div>
-
-
-        <div class="container mt-5">
-          <div class="swiper-container-miembros" style="display: none;">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
-                  <div>
-                    <img src="mienbro.png" alt="" width="200px">
-                  </div>
-                  <div>
-                    <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                    <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                      architecto aspernatur ab </p>
-                    <div>
-                      <img src="Instagram_2.png" alt="">
-                      <img src="LinkedIn 2.png" alt="">
-                      <img src="TwitterX.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 2 -->
-              <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
-                  <div>
-                    <img src="mienbro.png" alt="" width="200px">
-                  </div>
-                  <div>
-                    <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                    <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                      architecto aspernatur ab </p>
-                    <div>
-                      <img src="Instagram_2.png" alt="">
-                      <img src="LinkedIn 2.png" alt="">
-                      <img src="TwitterX.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 3 -->
-              <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
-                  <div>
-                    <img src="mienbro.png" alt="" width="200px">
-                  </div>
-                  <div>
-                    <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                    <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                      architecto aspernatur ab </p>
-                    <div>
-                      <img src="Instagram_2.png" alt="">
-                      <img src="LinkedIn 2.png" alt="">
-                      <img src="TwitterX.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 4 -->
-              <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
-                  <div>
-                    <img src="mienbro.png" alt="" width="200px">
-                  </div>
-                  <div>
-                    <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                    <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                      architecto aspernatur ab </p>
-                    <div>
-                      <img src="Instagram_2.png" alt="">
-                      <img src="LinkedIn 2.png" alt="">
-                      <img src="TwitterX.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 5 -->
-              <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
-                  <div>
-                    <img src="mienbro.png" alt="" width="200px">
-                  </div>
-                  <div>
-                    <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                    <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                      architecto aspernatur ab </p>
-                    <div>
-                      <img src="Instagram_2.png" alt="">
-                      <img src="LinkedIn 2.png" alt="">
-                      <img src="TwitterX.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 6 -->
-              <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
-                  <div>
-                    <img src="mienbro.png" alt="" width="200px">
-                  </div>
-                  <div>
-                    <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                    <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                      architecto aspernatur ab </p>
-                    <div>
-                      <img src="Instagram_2.png" alt="">
-                      <img src="LinkedIn 2.png" alt="">
-                      <img src="TwitterX.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 7 -->
-              <div class="swiper-slide">
-                <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
-                  <div>
-                    <img src="mienbro.png" alt="" width="200px">
-                  </div>
-                  <div>
-                    <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
-                    <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
-                      architecto aspernatur ab </p>
-                    <div>
-                      <img src="Instagram_2.png" alt="">
-                      <img src="LinkedIn 2.png" alt="">
-                      <img src="TwitterX.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Añade más slides si es necesario -->
-            </div>
-            <!-- Botones de navegación -->
-            <div style="padding-top: 22px;gap: 30px;display: flex;justify-content: flex-end;">
-              <div class="swiper-button-prev" style="position: relative !important;"></div>
-              <div class="swiper-button-next" style="position: relative !important;"></div>
-            </div>
-          </div>
-
-        </div>
-
       </section>
 
 
-
-
-      <section style="display: flex;flex-direction: column; justify-content: center; align-items: center; gap: 30px;    margin-bottom: 50px;
-           padding-bottom: 50px;" id="clientes">
-        <h2 style="padding: 10px;border-bottom: #ff4400 solid;text-align: center;">Nuestros Clientes nos Respaldan</h2>
-        <div class="container">
-          <div style="display: flex;justify-content: center;gap: 20px;" class="row">
-            <div class="col-lg-4" style="display: flex;gap: 15px;background: rgba(128, 128, 128, 0.158);padding: 20px;">
-              <div>
-                <img src="cliente_icon.png" alt="" width="60" height="60">
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit natus explicabo recusandae
-                  asperiores, commodi illum iste odio. Aperiam voluptatibus tempore ipsa iste aut, eos non molestiae
-                  cupiditate, inventore, pariatur dicta?</p>
-              </div>
-            </div>
-            <div class="col-lg-4" style="display: flex;gap: 15px;background: rgba(128, 128, 128, 0.158);padding: 20px;">
-              <div>
-                <img src="cliente_icon.png" alt="" width="60" height="60">
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit natus explicabo recusandae
-                  asperiores, commodi illum iste odio. Aperiam voluptatibus tempore ipsa iste aut, eos non molestiae
-                  cupiditate, inventore, pariatur dicta?</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container container-custom">
-          <!-- Recuadro centrado -->
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <div class="slider-box">
-                <div class="slider-container">
-                  <div class="swiper-container_clientes">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://static.vecteezy.com/system/resources/previews/014/018/573/non_2x/netflix-logo-on-transparent-background-free-vector.jpg"
-                          alt="Carrefour">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9z1Bc8tZMb73YywNGDAdx6qQmS4dPJVemjA&s"
-                          alt="IE University">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/EDteam-logo-fondo-blanco.svg/1024px-EDteam-logo-fondo-blanco.svg.png"
-                          alt="Telefónica">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://www.internetmatters.org/wp-content/uploads/2018/02/Steam-logo-2-600x314.png"
-                          alt="Netflix">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
-                          alt="Amazon">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Google-flutter-logo.png/512px-Google-flutter-logo.png"
-                          alt="Google">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://blogs.microsoft.com/wp-content/uploads/prod/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg"
-                          alt="Microsoft">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="img-clientes"
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/512px-IBM_logo.svg.png"
-                          alt="IBM">
-                      </div>
-                    </div>
-                    <!-- Paginación -->
-                    <div class="swiper-pagination"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
     </section>
+
+
+    <div class="equipo-slider " style="display: none;">
+      <div class="swiper-container-miembros" style="padding-inline: 30px;">
+        <div class="swiper-wrapper" style="transition: transform 0.3s ease-in-out;">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
+              <div>
+                <img src="mienbro.png" alt="" width="200px">
+              </div>
+              <div>
+                <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
+                <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
+                  architecto aspernatur ab </p>
+                <div>
+                  <img src="Instagram_2.png" alt="">
+                  <img src="LinkedIn 2.png" alt="">
+                  <img src="TwitterX.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
+              <div>
+                <img src="mienbro.png" alt="" width="200px">
+              </div>
+              <div>
+                <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
+                <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
+                  architecto aspernatur ab </p>
+                <div>
+                  <img src="Instagram_2.png" alt="">
+                  <img src="LinkedIn 2.png" alt="">
+                  <img src="TwitterX.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
+              <div>
+                <img src="mienbro.png" alt="" width="200px">
+              </div>
+              <div>
+                <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
+                <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
+                  architecto aspernatur ab </p>
+                <div>
+                  <img src="Instagram_2.png" alt="">
+                  <img src="LinkedIn 2.png" alt="">
+                  <img src="TwitterX.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
+              <div>
+                <img src="mienbro.png" alt="" width="200px">
+              </div>
+              <div>
+                <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
+                <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
+                  architecto aspernatur ab </p>
+                <div>
+                  <img src="Instagram_2.png" alt="">
+                  <img src="LinkedIn 2.png" alt="">
+                  <img src="TwitterX.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
+              <div>
+                <img src="mienbro.png" alt="" width="200px">
+              </div>
+              <div>
+                <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
+                <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
+                  architecto aspernatur ab </p>
+                <div>
+                  <img src="Instagram_2.png" alt="">
+                  <img src="LinkedIn 2.png" alt="">
+                  <img src="TwitterX.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
+              <div>
+                <img src="mienbro.png" alt="" width="200px">
+              </div>
+              <div>
+                <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
+                <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
+                  architecto aspernatur ab </p>
+                <div>
+                  <img src="Instagram_2.png" alt="">
+                  <img src="LinkedIn 2.png" alt="">
+                  <img src="TwitterX.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 7 -->
+          <div class="swiper-slide">
+            <div class="miembro" style="display: flex;align-items: center;gap: 20px;">
+              <div>
+                <img src="mienbro.png" alt="" width="200px">
+              </div>
+              <div>
+                <span style="font-family: jost;font-size: 30px;font-weight: 500;">Francisco</span>
+                <p style="color: #B88118; font-family: roboto;font-weight: 600;">WEB DEVELOPER</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error laborum soluta,
+                  architecto aspernatur ab </p>
+                <div>
+                  <img src="Instagram_2.png" alt="">
+                  <img src="LinkedIn 2.png" alt="">
+                  <img src="TwitterX.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Añade más slides si es necesario -->
+        </div>
+        <!-- Botones de navegación -->
+        <div style="padding-top: 22px;gap: 30px;display: flex;justify-content: flex-end; ">
+          <div class="swiper-button-prev" style="position: relative !important;"></div>
+          <div class="swiper-button-next" style="position: relative !important;"></div>
+        </div>
+      </div>
+      <div class="fade-out left"></div>
+      <div class="fade-out right"></div> 
+
+    </div>
+
+
+    <section style="display: flex;flex-direction: column; justify-content: center; align-items: center; gap: 30px;    margin-bottom: 50px;
+    padding-bottom: 50px;" id="clientes">
+      <h2 style="padding: 10px;border-bottom: #ff4400 solid;text-align: center;">Nuestros Clientes nos Respaldan</h2>
+      <div class="container">
+        <div style="display: flex;justify-content: center;gap: 20px;" class="row">
+          <div class="col-lg-4" style="display: flex;gap: 15px;background: rgba(128, 128, 128, 0.158);padding: 20px;">
+            <div>
+              <img src="cliente_icon.png" alt="" width="60" height="60">
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit natus explicabo recusandae
+                asperiores, commodi illum iste odio. Aperiam voluptatibus tempore ipsa iste aut, eos non molestiae
+                cupiditate, inventore, pariatur dicta?</p>
+            </div>
+          </div>
+          <div class="col-lg-4" style="display: flex;gap: 15px;background: rgba(128, 128, 128, 0.158);padding: 20px;">
+            <div>
+              <img src="cliente_icon.png" alt="" width="60" height="60">
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit natus explicabo recusandae
+                asperiores, commodi illum iste odio. Aperiam voluptatibus tempore ipsa iste aut, eos non molestiae
+                cupiditate, inventore, pariatur dicta?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container container-custom">
+        <!-- Recuadro centrado -->
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="slider-box">
+              <div class="slider-container">
+                <div class="swiper-container_clientes">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://static.vecteezy.com/system/resources/previews/014/018/573/non_2x/netflix-logo-on-transparent-background-free-vector.jpg"
+                        alt="Carrefour">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9z1Bc8tZMb73YywNGDAdx6qQmS4dPJVemjA&s"
+                        alt="IE University">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/EDteam-logo-fondo-blanco.svg/1024px-EDteam-logo-fondo-blanco.svg.png"
+                        alt="Telefónica">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://www.internetmatters.org/wp-content/uploads/2018/02/Steam-logo-2-600x314.png"
+                        alt="Netflix">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+                        alt="Amazon">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Google-flutter-logo.png/512px-Google-flutter-logo.png"
+                        alt="Google">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://blogs.microsoft.com/wp-content/uploads/prod/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg"
+                        alt="Microsoft">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="img-clientes"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/512px-IBM_logo.svg.png"
+                        alt="IBM">
+                    </div>
+                  </div>
+                  <!-- Paginación -->
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section id="contacto" style=" ">
       <div class="box-master">
@@ -1111,26 +1115,26 @@
 
   </script>
 
-<script>
-  // Mostrar el botón cuando se desplaza hacia abajo
-window.onscroll = function() {
-  var scrollBtn = document.getElementById("scrollTopBtn");
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollBtn.style.display = "block"; // Mostrar botón
-  } else {
-    scrollBtn.style.display = "none"; // Ocultar botón
-  }
-};
+  <script>
+    // Mostrar el botón cuando se desplaza hacia abajo
+    window.onscroll = function () {
+      var scrollBtn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block"; // Mostrar botón
+      } else {
+        scrollBtn.style.display = "none"; // Ocultar botón
+      }
+    };
 
-// Función para volver arriba de la página
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth' // Suaviza el desplazamiento
-  });
-}
+    // Función para volver arriba de la página
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Suaviza el desplazamiento
+      });
+    }
 
-</script>
+  </script>
 </body>
 
 </html>
