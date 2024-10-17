@@ -29,13 +29,15 @@
   <!-- font awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 
 
 <!--Slier servicios-->
 <style>
-  .swiper-container {
+  .swiper-container-serv{
     overflow-x: clip;
     width: 100%;
     height: 400px;
@@ -133,10 +135,9 @@
   }
 
   /*end*/
-
+/*
   .swiper-button-next {
     background-image: url('/icons8-derecha-en-círculo-2-100.png');
-    /* URL de tu imagen */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -146,7 +147,6 @@
 
   .swiper-button-prev {
     background-image: url('/icons8-izquierda-en-círculo-2-100.png');
-    /* URL de tu imagen */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -157,14 +157,13 @@
   .swiper-button-next::after,
   .swiper-button-prev::after {
     content: '';
-    /* Oculta los íconos predeterminados */
-  }
+  }*/
 </style>
 
 <!--Slider Clientes-->
 <style>
   /* Contenedor del slider */
-  .slider-container {
+  .slider-container-clientes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,11 +194,11 @@
   }
 
   /* Estilo para el recuadro del slider */
-  .slider-box {
+  .slider-box-clientes {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     padding: 10px;
     /* Espaciado interno del recuadro */
@@ -212,7 +211,7 @@
     /* Ancho máximo del contenedor */
   }
 
-  .swiper-pagination {
+  .swiper-container_clientes .swiper-pagination {
     position: relative !important;
   }
 
@@ -223,6 +222,47 @@
   }
 </style>
 
+
+<!--Slider orcronics-->
+<style>
+  .slider-box {
+      margin-top: 20px;
+  }
+
+  /* Swiper */
+  .swiper-container-orcronics {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      border-radius: 6px;
+      box-shadow: 1px 1px 10px 0 #00000069;
+      overflow: hidden;
+  }
+
+  .swiper-container-orcronics  .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  
+  /* Estilos de las flechas de navegación */
+  .swiper-button-next,
+  .swiper-button-prev {
+      color: #e94e35ff;
+      /* Color de las flechas */
+  }
+
+  /* Estilos de la paginación */
+  .swiper-pagination-bullet {
+      background-color: black;
+      /* Color de los bullets inactivos */
+  }
+
+  .swiper-pagination-bullet-active {
+      background-color: #e94e35ff;
+      /* Color del bullet activo */
+  }
+</style>
 
 <body>
 
@@ -361,42 +401,37 @@
 
         </div>
 
-        <div class="col-lg-5 color-block " style="   ">
-
-          <div>
-            <img src="image 32 (6).png" style="width: 100%;" alt="">
-          </div>
-          <!-- 
-            <div class="container container-custom ">
-              <div class="row justify-content-center">
-                <div class="col-12">
-                  <div class="slider-box">
-                    <div class="slider-container">
-                      <div class="swiper-container_banner">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <img src="image 32 (6).png" alt="Carrefour">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="image 32 (6).png" alt="Carrefour">
-                          </div>
-                          
-                         
-                        </div>
-                        <div class="swiper-pagination"></div>
+        <div class="col-lg-5 col-md-5 slider-box" style="position: relative;">
+          <div style="height: 100%;position: relative;display: flex;align-items: center;">
+              <div class="swiper-container-orcronics"
+                  style="max-width: 100%; height: 500px; display: flex; justify-content: center;position: relative;">
+                  <div class="swiper-wrapper" style="width: 100%; height: 100%;">
+  
+                      <div class="swiper-slide">
+                          <img src="/multimedia/SE_slider-1-slide-1.webp"
+                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 2">
                       </div>
-                    </div>
+                      <div class="swiper-slide">
+                          <img src="/multimedia/SE_slider-1-slide-2.webp"
+                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 3">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="/multimedia/SE_slider-1-slide-3.webp"
+                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 3">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="/multimedia/SE_slider-1-slide-4.webp"
+                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 1">
+                      </div>
                   </div>
-                </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
               </div>
-            </div>
--->
-          <div id="ii"
-            style=" background: #fd4909;padding: 10px; display: flex; align-items: center; gap: 20px;justify-content: center;color: white;">
-            <span style=" font-size: 20px;">Buscas servicios eficientes para tu empresa?</span>
-            <a class="btn_contac_banner" href="#contacto">Contactar</a>
           </div>
-        </div>
+      </div>
+
+
       </div>
     </section>
 
@@ -409,7 +444,7 @@
     <div class="element"
       style="width: 100%;display: flex;align-items: center; justify-content: center;position: relative;">
       <div class=" sec1 up" style="padding-top: 50px;overflow: hidden;max-width:1320px;">
-        <div class="swiper-container">
+        <div class="swiper-container-serv">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
@@ -816,8 +851,8 @@
         <!-- Recuadro centrado -->
         <div class="row justify-content-center">
           <div class="col-12">
-            <div class="slider-box">
-              <div class="slider-container">
+            <div class="slider-box-clientes" style="">
+              <div class="slider-container-clientes">
                 <div class="swiper-container_clientes">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -1010,7 +1045,7 @@
   </script>
 
   <script>
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container-serv', {
       slidesPerView: 4, // Valor por defecto para pantallas grandes
       spaceBetween: 30, // Espacio entre las slides
       freeMode: true,   // Habilitar el modo de desplazamiento libre
@@ -1095,6 +1130,28 @@
 
   </script>
 
+
+
+
+  <script>
+    var swiperor = new Swiper('.swiper-container-orcronics', {
+      loop: true, // Para hacer que el -box sea infinito
+      /* autoplay: {
+         delay: 3000, // 3 segundos entre cada slide
+         disableOnInteraction: false,
+       },*/
+      slidesPerView: 1, // Mostrar solo una imagen por slide
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleSwitch = document.getElementById('theme-toggle');
@@ -1120,59 +1177,63 @@
 
   </script>
 
-  <script>
-    // Mostrar el botón cuando se desplaza hacia abajo
-    window.onscroll = function () {
-      var scrollBtn = document.getElementById("scrollTopBtn");
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = "block"; // Mostrar botón
-      } else {
-        scrollBtn.style.display = "none"; // Ocultar botón
-      }
+
+
+<script>
+  // Mostrar el botón cuando se desplaza hacia abajo
+  window.onscroll = function () {
+    var scrollBtn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "block"; // Mostrar botón
+    } else {
+      scrollBtn.style.display = "none"; // Ocultar botón
+    }
+  };
+
+  // Función para volver arriba de la página
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Suaviza el desplazamiento
+    });
+  }
+
+</script>
+
+
+
+<script>
+  function Animacion() {
+    const elementos = document.querySelectorAll('.element');
+
+    function dispararAnimacion(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Añadir clase para activar la animación
+          entry.target.classList.add('in-view');
+
+          // Dejar de observar el elemento después de que la animación se haya activado
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    const opciones = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.50
     };
 
-    // Función para volver arriba de la página
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Suaviza el desplazamiento
-      });
-    }
+    const observador = new IntersectionObserver(dispararAnimacion, opciones);
 
-  </script>
+    elementos.forEach(elemento => {
+      observador.observe(elemento);
+    });
+  }
 
+  document.addEventListener('DOMContentLoaded', Animacion);
+</script>
 
-  <script>
-    function Animacion() {
-      const elementos = document.querySelectorAll('.element');
-
-      function dispararAnimacion(entries, observer) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Añadir clase para activar la animación
-            entry.target.classList.add('in-view');
-
-            // Dejar de observar el elemento después de que la animación se haya activado
-            observer.unobserve(entry.target);
-          }
-        });
-      }
-
-      const opciones = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.50
-      };
-
-      const observador = new IntersectionObserver(dispararAnimacion, opciones);
-
-      elementos.forEach(elemento => {
-        observador.observe(elemento);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', Animacion);
-  </script>
 </body>
 
 </html>
