@@ -330,7 +330,7 @@ body:before {
   margin-bottom: 90px;
   padding-top: 10px;
   padding-bottom: 10px;
-  mask-image: linear-gradient(to bottom, transparent, black 1%, black 100%, transparent);
+  mask-image: var(--mask-image) ;
 }
 
 
@@ -348,12 +348,12 @@ body:before {
 
 .fade-out.left {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: var(--background-right);
 }
 
 .fade-out.right {
   right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: var(--background-left);
 }
 
 .fade-out.top,
@@ -401,6 +401,9 @@ body:before {
 
   .content-container {
     padding-inline: 10px;
+  }
+  .sub-box{
+    padding: 0px !important;
   }
 }
 
@@ -559,6 +562,9 @@ body {
   --primary-color: #000000;
   --secondary-color: #000000;
   --ms-filter: invert(100%) brightness(0%);
+  --background-right: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  --background-left: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  --mask-image:linear-gradient(to bottom, transparent, black 0%, black 100%, transparent);
 }
 
 /* Tema oscuro */
@@ -568,6 +574,9 @@ body.dark-theme {
   --primary-color: #ffffff;
   --secondary-color: #ffffff;
   --ms-filter:none;
+  --background-right: linear-gradient(to right, rgb(22 20 37), rgba(255, 255, 255, 0));
+  --background-left: linear-gradient(to left, rgb(22 20 37), rgba(255, 255, 255, 0));
+  --mask-image:linear-gradient(to bottom, transparent, black 12%, black 100%, transparent);
 }
 
 body {
@@ -695,4 +704,75 @@ input:checked+.slider:before {
 #scrollTopBtn:hover {
   background-color: #555;
   /* Color al pasar el ratón por encima */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.element {
+  overflow: hidden;
+  /* Asegura que los elementos no sobresalgan */
+}
+
+.sec1 {
+  opacity: 0;
+  /* Comienzan invisibles */
+  transform: translateY(100%);
+  /* Posición inicial fuera del viewport, hacia abajo */
+  transition: opacity 1000ms ease, transform 1000ms ease;
+  /* Transiciones suaves */
+}
+
+
+
+/* Estilos generales para las secciones */
+.sec1 {
+  opacity: 0; /* Comienzan invisibles */
+  transition: opacity 1000ms ease; /* Transición de opacidad común */
+}
+
+/* Efecto Fade */
+.fade {
+  transform: translateX(100%); /* Posición inicial fuera del viewport, hacia la derecha */
+}
+
+/* Efecto Up */
+.up {
+  transform: translateY(100%); /* Posición inicial fuera del viewport, hacia abajo */
+}
+
+/* Efecto Show */
+.show {
+  transform: scale(0); /* Escala inicial en 0 */
+}
+
+/* Al entrar en el viewport, se aplican las transformaciones */
+.element.in-view .sec1 {
+  opacity: 1; /* Hacer visible */
+  transition: opacity 1000ms ease, transform 1000ms ease; /* Transiciones de opacidad y transformación */
+}
+
+.element.in-view .fade {
+  transform: translateX(0); /* Volver a su posición original */
+}
+
+.element.in-view .up {
+  transform: translateY(0); /* Volver a su posición original */
+}
+
+.element.in-view .show {
+  transform: scale(1); /* Volver a su tamaño original */
 }

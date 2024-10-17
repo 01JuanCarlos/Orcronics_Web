@@ -301,8 +301,8 @@
 
   <div class="banner" style="display: flex; flex-direction: column;">
 
-    <section class="reasons-section container">
-      <div class="cont_glass row" style="display: flex;gap: 30px;">
+    <section class="reasons-section container ">
+      <div class="cont_glass row   " style="display: flex;gap: 30px;">
         <div class="col-lg-6 col-md-12 content-container">
 
           <div class="text-container">
@@ -398,14 +398,14 @@
       </div>
     </section>
 
-    <section class="container servicios" style="">
+    <section class="container servicios " style="">
       <h2 style="border-bottom: solid orangered; padding-bottom: 20px; text-align: center;">Servicios que ofrecemos a
         las empresas del sector
         de las telecomunicaciones</h2>
     </section>
 
-    <div style="width: 100%;display: flex;align-items: center; justify-content: center;">
-      <div class="" style="padding-top: 50px;overflow: hidden;max-width:1320px;">
+    <div class="element" style="width: 100%;display: flex;align-items: center; justify-content: center;position: relative;">
+      <div class=" sec1 up" style="padding-top: 50px;overflow: hidden;max-width:1320px;">
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -463,6 +463,7 @@
           <div class="swiper-button-next" style="position: relative !important;"></div>
         </div>
       </div>
+     
     </div>
 
     <section class="box-naranja">
@@ -474,8 +475,8 @@
         información <img src="Left Arrow_black.png" alt=""></a>
     </section>
 
-    <section class="container about" style=" margin-bottom: 50px;" id="nosotros">
-      <div class="row  section-about" style="gap:10px; justify-content: center;">
+    <section class="container about element" style=" margin-bottom: 50px;" id="nosotros">
+      <div class="row  section-about sec1 up" style="gap:10px; justify-content: center;">
         <div class="col-lg-4 col-md-5" style="justify-content: center;display: flex;">
           <img class="img-about" src="about.png" style="width: 100%;" alt="">
         </div>
@@ -518,8 +519,8 @@
       </div>
     </section>
 
-    <section style="display: flex;flex-direction: column;justify-content: center; background-size: cover;"
-      class="container">
+    <section style="display: flex;flex-direction: column;justify-content: center; background-size: cover;" 
+      class="container ">
 
       <section
         style="display: flex;flex-direction: column; justify-content: center; align-items: center; margin-bottom: 50px;">
@@ -554,10 +555,10 @@
 
       <section
         style=" align-items: center;display: flex;flex-direction: column;justify-content: center;margin-bottom: 50px;"
-        class="container">
+        class="container element">
         <h2 style="padding: 10px;    margin-bottom: 30px;
           border-bottom: #ff4400 solid;text-align: center;">Miembros del equipo de Orcronics</h2>
-        <div class="row container-miembros-1" style="gap: 0px;">
+        <div class="row container-miembros-1 sec1 up" style="gap: 0px;">
           <div class="miembro col-lg-6" style="display: flex;align-items: center;gap: 20px;padding: 20px;">
             <div>
               <img src="mienbro.png" alt="" width="200px">
@@ -1135,6 +1136,39 @@
     }
 
   </script>
+
+
+<script>
+function Animacion() {
+    const elementos = document.querySelectorAll('.element');
+
+    function dispararAnimacion(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Añadir clase para activar la animación
+                entry.target.classList.add('in-view');
+
+                // Dejar de observar el elemento después de que la animación se haya activado
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    const opciones = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.50
+    };
+
+    const observador = new IntersectionObserver(dispararAnimacion, opciones);
+
+    elementos.forEach(elemento => {
+        observador.observe(elemento);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', Animacion);
+</script>
 </body>
 
 </html>
