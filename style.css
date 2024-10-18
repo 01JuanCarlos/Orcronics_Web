@@ -525,46 +525,164 @@ body:before {
   .dropdown {
     width: 100%;
   }
+  .theme-toggle{
+    top: 50% !important;
+  }
 
 }
 
 
 
-/*CAMBIO DE TEMA*/
-nav .nav-link {
-  transition: color 0.3s ease;
-}
+
+
+
+/*SWICH CAMBIAR TEMA*/
+
+
+  /* Contenedor del interruptor con posición fija y alineado a la derecha */
+  .theme-toggle {
+    position: fixed;
+    right: 0px;
+    /* Pegado al borde derecho */
+    top: 30%;
+    /* Centrado verticalmente */
+    transform: translateY(-50%);
+    /* Centrar correctamente */
+    display: inline-block;
+    width: 32px;
+    /* Ancho más estrecho para que sea vertical */
+    height: 56px;
+    /* Altura para el diseño vertical */
+    z-index: 1000;
+    /* Asegura que esté encima del contenido */
+  }
+
+  /* Ocultar el input checkbox */
+  #theme-switch {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* Estilo de la etiqueta del interruptor, ahora vertical */
+  .toggle-label {
+    background-color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    transition: background-color 0.3s;
+  }
+
+  /* Icono de la luna (cambiar para que aparezca en el modo claro) */
+  .toggle-moon {
+    position: absolute;
+    bottom: 4px;
+    /* Cambiar posición con el sol */
+    left: 20%;
+    font-size: 16px;
+    color: #0d0e3d;
+    opacity: 0;
+    /* Cambiar a oculto por defecto */
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  /* Icono del sol (cambiar para que aparezca en el modo oscuro) */
+  .toggle-sun {
+    position: absolute;
+    top: 12px;
+    /* Cambiar posición con la luna */
+    left: 27%;
+    font-size: 16px;
+    color: #2600ff;
+    opacity: 1;
+    /* Hacerlo visible por defecto */
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  /* Estilos del sol y la luna */
+  .toggle-sun,
+  .toggle-moon {
+    position: absolute;
+    transform: translateY(-50%);
+  
+  }
+
+  /* Estilo del círculo del interruptor */
+  .toggle-label::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    left: 1.5px;
+    bottom: 2.5px;
+    top: 27px;
+    background-color: #110e0e;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  /* Estado activo cuando el checkbox está marcado (modo claro) */
+  #theme-switch:checked+.toggle-label {
+    background-color: #0b1638;
+  }
+
+  /* Cambia el color del círculo cuando el modo claro está activado */
+  #theme-switch:checked+.toggle-label::before {
+    top: 26px;
+    transform: translateY(-25px);
+    /* Mueve el círculo hacia arriba */
+    background-color: #ffffff;
+    /* Círculo negro en modo claro */
+  }
+
+  /* Estado activo cuando el checkbox está marcado (modo claro) */
+  /* Aquí también intercambiamos las transiciones de los iconos */
+  #theme-switch:checked+.toggle-label .toggle-moon {
+    opacity: 1;
+    /* Ahora se mostrará la luna en modo claro */
+    transform: translateY(0);
+  }
+
+  #theme-switch:checked+.toggle-label .toggle-sun {
+    opacity: 0;
+    /* Ahora se ocultará el sol en modo claro */
+    transform: translateY(20px);
+    /* Mueve hacia fuera de la vista */
+  }
+
+
+
+  /* Cambia el color del círculo en tema claro */
+  body.light-theme .toggle-label::before {
+    background-color: #000;
+    /* Fondo negro para el círculo en tema claro */
+  }
+
+
+
+
+
+
+
+
 
 /* Tema claro (por defecto) */
-body.light-theme nav .nav-link {
-  color: #000;
-  /* Letras negras en el tema claro */
-}
-
-/* Tema oscuro */
-body.dark-theme nav .nav-link {
-  color: #fff;
-  /* Letras blancas en el tema oscuro */
-}
-
-
-
-
-body {
-  transition: background-color 0.3s, color 0.3s;
-
-}
-
-/* Definición de variables del tema claro (por defecto) */
 :root {
   --background-image: url('bg_blanck3.png');
   --background-color: #ffffff;
   --primary-color: #000000;
   --secondary-color: #000000;
-  --ms-filter: invert(100%) brightness(0%);
-  --background-right: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  --background-left: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  --mask-image:linear-gradient(to bottom, transparent, black 0%, black 100%, transparent);
+}
+
+body {
+  background-image: var(--background-image);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Tema oscuro */
@@ -573,97 +691,19 @@ body.dark-theme {
   --background-color: #0a081af2;
   --primary-color: #ffffff;
   --secondary-color: #ffffff;
-  --ms-filter:none;
-  --background-right: linear-gradient(to right, rgb(22 20 37), rgba(255, 255, 255, 0));
-  --background-left: linear-gradient(to left, rgb(22 20 37), rgba(255, 255, 255, 0));
-  --mask-image:linear-gradient(to bottom, transparent, black 12%, black 100%, transparent);
 }
 
-body {
-
-  background-image: var(--background-image);
-  background-color: var(--background-color);
-  color: var(--primary-color);
-
+nav .nav-link {
+  transition: color 0.3s ease;
 }
 
-h1 {
-  color: var(--primary-color);
+body.light-theme nav .nav-link {
+  color: #000;
 }
 
-p {
-  color: var(--secondary-color);
+body.dark-theme nav .nav-link {
+  color: #fff;
 }
-
-/* Estilos para el switch */
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #c5c0c0;
-  transition: 0.4s;
-  border-radius: 15px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #ffffff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-input:checked+.slider {
-  background-color: #32224d;
-}
-
-input:checked+.slider:before {
-  transform: translateX(26px);
-}
-
-/* Estilos para el slider */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-@media(max-width: 1140px) {
-  .theme-switch-wrapper {
-    
-    display: none !important;
-  }
-}
-
 
 
 

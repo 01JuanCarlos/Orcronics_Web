@@ -224,6 +224,13 @@
 </style>
 
 <body>
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" />
+    <label for="theme-switch" class="toggle-label">
+      <span class="toggle-sun"><img src="sun.png" width="15px" alt="Sun"></span>
+      <span class="toggle-moon"><img src="moon.png" width="15px" alt="Moon"></span>
+    </label>
+  </div>
   <div class="container">
     <div class="row header-franja">
       <div style="display: flex; align-items: center;padding-inline: 50px;gap: 52px;" class="col-lg-9 info-header">
@@ -241,13 +248,7 @@
         <img src="Instagram.png" alt="">
         <img src="LinkedIn.png" alt="">
       </div>
-      <div class="theme-switch-wrapper col-lg-1" style="width: auto;
-    padding: 26px;">
-        <label class="theme-switch" for="theme-toggle">
-          <input type="checkbox" id="theme-toggle">
-          <span class="slider"></span>
-        </label>
-      </div>
+
     </div>
 
   </div>
@@ -417,6 +418,47 @@
     });
 
   </script>
+
+    <!-- Configuracion para cambiar TEMA de la pagina -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleSwitch = document.getElementById('theme-switch');
+        const body = document.body;
+  
+        // Comprobar el estado inicial del tema en localStorage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'light') {
+          body.classList.add('light-theme');
+          toggleSwitch.checked = true; // Suponiendo que el switch está asociado al tema claro
+        } else if (currentTheme === 'dark') {
+          body.classList.add('dark-theme');
+          toggleSwitch.checked = false; // Suponiendo que el switch está asociado al tema oscuro
+        } else {
+          // Si no hay tema guardado, verificar la preferencia del sistema
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add('dark-theme');
+            toggleSwitch.checked = false; // Cambiar según la preferencia
+          } else {
+            body.classList.add('light-theme');
+            toggleSwitch.checked = true; // Cambiar según la preferencia
+          }
+        }
+  
+        // Escuchar el cambio del switch
+        toggleSwitch.addEventListener('change', () => {
+          if (toggleSwitch.checked) {
+            body.classList.add('light-theme');
+            body.classList.remove('dark-theme'); // Asegurarse de eliminar la clase del tema oscuro
+            localStorage.setItem('theme', 'light'); // Guardar tema claro
+          } else {
+            body.classList.remove('light-theme'); // Asegurarse de eliminar la clase del tema claro
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark'); // Guardar tema oscuro
+          }
+        });
+      });
+  
+    </script>
 
 
 </body>

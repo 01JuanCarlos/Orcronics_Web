@@ -37,7 +37,7 @@
 
 <!--Slier servicios-->
 <style>
-  .swiper-container-serv{
+  .swiper-container-serv {
     overflow-x: clip;
     width: 100%;
   }
@@ -134,7 +134,7 @@
   }
 
   /*end*/
-/*
+  /*
   .swiper-button-next {
     background-image: url('/icons8-derecha-en-círculo-2-100.png');
     background-size: contain;
@@ -225,45 +225,58 @@
 <!--Slider orcronics-->
 <style>
   .slider-box {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 
   /* Swiper */
   .swiper-container-orcronics {
-      padding-left: 0px !important;
-      padding-right: 0px !important;
-      border-radius: 6px;
-      box-shadow: 1px 1px 10px 0 #00000069;
-      overflow: hidden;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px 0 #00000069;
+    overflow: hidden;
   }
 
-  .swiper-container-orcronics  .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  .swiper-container-orcronics .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  
+
   /* Estilos de las flechas de navegación */
   .swiper-button-next,
   .swiper-button-prev {
-      color: #e94e35ff;
-      /* Color de las flechas */
+    color: #e94e35ff;
+    /* Color de las flechas */
   }
 
   /* Estilos de la paginación */
   .swiper-pagination-bullet {
-      background-color: black;
-      /* Color de los bullets inactivos */
+    background-color: black;
+    /* Color de los bullets inactivos */
   }
 
   .swiper-pagination-bullet-active {
-      background-color: #e94e35ff;
-      /* Color del bullet activo */
+    background-color: #e94e35ff;
+    /* Color del bullet activo */
   }
 </style>
 
+<style>
+
+</style>
+
 <body>
+
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" />
+    <label for="theme-switch" class="toggle-label">
+      <span class="toggle-sun"><img src="sun.png" width="15px" alt="Sun"></span>
+      <span class="toggle-moon"><img src="moon.png" width="15px" alt="Moon"></span>
+    </label>
+  </div>
+
 
   <div class="container">
     <div class="row header-franja">
@@ -282,13 +295,8 @@
         <img src="Instagram.png" alt="">
         <img src="LinkedIn.png" alt="">
       </div>
-      <div class="theme-switch-wrapper col-1" style="width: auto;
-    padding: 26px;">
-        <label class="theme-switch" for="theme-toggle">
-          <input type="checkbox" id="theme-toggle">
-          <span class="slider"></span>
-        </label>
-      </div>
+
+
     </div>
 
   </div>
@@ -344,7 +352,7 @@
 
     <section class="reasons-section container ">
       <div class="cont_glass row   " style="display: flex;gap: 30px;">
-        <div class="col-lg-6 col-md-12 content-container">
+        <div class="col-lg-6 col-md-12  content-container">
 
           <div class="text-container">
             <p class="highlight-text">¿Por qué elegir Ocronics?</p>
@@ -400,35 +408,35 @@
 
         </div>
 
-        <div class="col-lg-5 col-md-8 slider-box" style="position: relative;">
+        <div class="col-lg-5 col-md-8 col-sm-12 slider-box" style="position: relative;">
           <div style="height: 100%;position: relative;display: flex;align-items: center;">
-              <div class="swiper-container-orcronics"
-                  style="max-width: 100%; height: 500px; display: flex; justify-content: center;position: relative;">
-                  <div class="swiper-wrapper" style="width: 100%; height: 100%;">
-  
-                      <div class="swiper-slide">
-                          <img src="/multimedia/SE_slider-1-slide-1.webp"
-                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 2">
-                      </div>
-                      <div class="swiper-slide">
-                          <img src="/multimedia/SE_slider-1-slide-2.webp"
-                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 3">
-                      </div>
-                      <div class="swiper-slide">
-                          <img src="/multimedia/SE_slider-1-slide-3.webp"
-                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 3">
-                      </div>
-                      <div class="swiper-slide">
-                          <img src="/multimedia/SE_slider-1-slide-4.webp"
-                              style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 1">
-                      </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
+            <div class="swiper-container-orcronics"
+              style="max-width: 100%; height: 500px; display: flex; justify-content: center;position: relative;">
+              <div class="swiper-wrapper" style="width: 100%; height: 100%;">
+
+                <div class="swiper-slide">
+                  <img src="serv3.png" style="width: 100%; height: 100%; object-fit: cover;"
+                    alt="Imagen 2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="serv2.png" style="width: 100%; height: 100%; object-fit: cover;"
+                    alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                  <img src="serv1.png" style="width: 100%; height: 100%; object-fit: cover;"
+                    alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                  <img src="serv4.png" style="width: 100%; height: 100%; object-fit: cover;"
+                    alt="Imagen 1">
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
           </div>
-      </div>
+        </div>
 
 
       </div>
@@ -493,13 +501,13 @@
 
             <!-- Añade más slides si es necesario -->
           </div>
-            <!-- Botones de navegación -->
-        <div style="padding: 22px;gap: 30px;display: flex;justify-content: flex-end; margin-top: 20px;">
-          <div class="swiper-button-prev" style="position: relative !important;"></div>
-          <div class="swiper-button-next" style="position: relative !important;"></div>
+          <!-- Botones de navegación -->
+          <div style="padding: 22px;gap: 30px;display: flex;justify-content: flex-end; margin-top: 20px;">
+            <div class="swiper-button-prev" style="position: relative !important;"></div>
+            <div class="swiper-button-next" style="position: relative !important;"></div>
+          </div>
         </div>
-        </div>
-      
+
       </div>
 
     </div>
@@ -1014,7 +1022,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-  <!-- Inicializar Swiper -->
+  <!-- Inicializar Swiper clientes -->
   <script>
     var swiper = new Swiper('.swiper-container_clientes', {
       loop: true,
@@ -1043,7 +1051,7 @@
       }
     });
   </script>
-
+  <!-- Inicializar Swiper Servicios -->
   <script>
     var swiper = new Swiper('.swiper-container-serv', {
       slidesPerView: 4, // Valor por defecto para pantallas grandes
@@ -1086,7 +1094,7 @@
 
 
   </script>
-
+  <!-- Inicializar Swiper Miembros del equipo -->
   <script>
     var swiper = new Swiper('.swiper-container-miembros', {
       slidesPerView: 4, // Valor por defecto para pantallas grandes
@@ -1129,10 +1137,7 @@
 
 
   </script>
-
-
-
-
+  <!-- Inicializar Swiper sobre Orcronics -->
   <script>
     var swiperor = new Swiper('.swiper-container-orcronics', {
       loop: true, // Para hacer que el -box sea infinito
@@ -1151,88 +1156,99 @@
       },
     });
   </script>
-
+  <!-- Configuracion para cambiar TEMA de la pagina -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const toggleSwitch = document.getElementById('theme-toggle');
+      const toggleSwitch = document.getElementById('theme-switch');
+      const body = document.body;
 
-      // Cargar el tema guardado si existe
+      // Comprobar el estado inicial del tema en localStorage
       const currentTheme = localStorage.getItem('theme');
-      if (currentTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        toggleSwitch.checked = true;
+      if (currentTheme === 'light') {
+        body.classList.add('light-theme');
+        toggleSwitch.checked = true; // Suponiendo que el switch está asociado al tema claro
+      } else if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+        toggleSwitch.checked = false; // Suponiendo que el switch está asociado al tema oscuro
+      } else {
+        // Si no hay tema guardado, verificar la preferencia del sistema
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          body.classList.add('dark-theme');
+          toggleSwitch.checked = false; // Cambiar según la preferencia
+        } else {
+          body.classList.add('light-theme');
+          toggleSwitch.checked = true; // Cambiar según la preferencia
+        }
       }
 
       // Escuchar el cambio del switch
       toggleSwitch.addEventListener('change', () => {
         if (toggleSwitch.checked) {
-          document.body.classList.add('dark-theme');
-          localStorage.setItem('theme', 'dark'); // Guardar la preferencia en localStorage
+          body.classList.add('light-theme');
+          body.classList.remove('dark-theme'); // Asegurarse de eliminar la clase del tema oscuro
+          localStorage.setItem('theme', 'light'); // Guardar tema claro
         } else {
-          document.body.classList.remove('dark-theme');
-          localStorage.setItem('theme', 'light');
+          body.classList.remove('light-theme'); // Asegurarse de eliminar la clase del tema claro
+          body.classList.add('dark-theme');
+          localStorage.setItem('theme', 'dark'); // Guardar tema oscuro
         }
       });
     });
 
   </script>
+  <!-- Boton para ir hacia arriba -->
+  <script>
+    // Mostrar el botón cuando se desplaza hacia abajo
+    window.onscroll = function () {
+      var scrollBtn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block"; // Mostrar botón
+      } else {
+        scrollBtn.style.display = "none"; // Ocultar botón
+      }
+    };
 
-
-
-<script>
-  // Mostrar el botón cuando se desplaza hacia abajo
-  window.onscroll = function () {
-    var scrollBtn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollBtn.style.display = "block"; // Mostrar botón
-    } else {
-      scrollBtn.style.display = "none"; // Ocultar botón
-    }
-  };
-
-  // Función para volver arriba de la página
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Suaviza el desplazamiento
-    });
-  }
-
-</script>
-
-
-
-<script>
-  function Animacion() {
-    const elementos = document.querySelectorAll('.element');
-
-    function dispararAnimacion(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Añadir clase para activar la animación
-          entry.target.classList.add('in-view');
-
-          // Dejar de observar el elemento después de que la animación se haya activado
-          observer.unobserve(entry.target);
-        }
+    // Función para volver arriba de la página
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Suaviza el desplazamiento
       });
     }
 
-    const opciones = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.50
-    };
+  </script>
+  <!-- Tranciciones  -->
+  <script>
+    function Animacion() {
+      const elementos = document.querySelectorAll('.element');
 
-    const observador = new IntersectionObserver(dispararAnimacion, opciones);
+      function dispararAnimacion(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Añadir clase para activar la animación
+            entry.target.classList.add('in-view');
 
-    elementos.forEach(elemento => {
-      observador.observe(elemento);
-    });
-  }
+            // Dejar de observar el elemento después de que la animación se haya activado
+            observer.unobserve(entry.target);
+          }
+        });
+      }
 
-  document.addEventListener('DOMContentLoaded', Animacion);
-</script>
+      const opciones = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.50
+      };
+
+      const observador = new IntersectionObserver(dispararAnimacion, opciones);
+
+      elementos.forEach(elemento => {
+        observador.observe(elemento);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', Animacion);
+  </script>
 
 </body>
 
@@ -1244,7 +1260,7 @@
 
 
 
-
+  <!-- Estilos para contactanos -->
 <style>
   .box-header {
     display: flex;
