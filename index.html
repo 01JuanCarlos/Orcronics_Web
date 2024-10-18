@@ -1056,7 +1056,8 @@
     var swiper = new Swiper('.swiper-container-serv', {
       slidesPerView: 4, // Valor por defecto para pantallas grandes
       spaceBetween: 30, // Espacio entre las slides
-      freeMode: true,   // Habilitar el modo de desplazamiento libre
+      freeMode: true, 
+        // Habilitar el modo de desplazamiento libre
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -1097,6 +1098,7 @@
   <!-- Inicializar Swiper Miembros del equipo -->
   <script>
     var swiper = new Swiper('.swiper-container-miembros', {
+      
       slidesPerView: 4, // Valor por defecto para pantallas grandes
       spaceBetween: 30, // Espacio entre las slides
       freeMode: true,   // Habilitar el modo de desplazamiento libre
@@ -1141,10 +1143,10 @@
   <script>
     var swiperor = new Swiper('.swiper-container-orcronics', {
       loop: true, // Para hacer que el -box sea infinito
-      /* autoplay: {
+       autoplay: {
          delay: 3000, // 3 segundos entre cada slide
          disableOnInteraction: false,
-       },*/
+       },
       slidesPerView: 1, // Mostrar solo una imagen por slide
       pagination: {
         el: '.swiper-pagination',
