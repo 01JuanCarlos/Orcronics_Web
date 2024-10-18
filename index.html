@@ -262,9 +262,30 @@
     /* Color del bullet activo */
   }
 </style>
-
+<!--Slider Banner-->
 <style>
+  .swiper-container-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    /* Ajusta según tus necesidades */
+  }
 
+  .swiper-container-banner .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #f0f0f0;
+    height: 100%;
+  }
+
+  .swiper-container-banner .swiper-slide img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
 </style>
 
 <body>
@@ -279,7 +300,7 @@
 
 
   <div class="container">
-    <div class="row header-franja">
+    <div id="franja" class="row header-franja">
       <div style="display: flex; align-items: center;padding-inline: 50px;gap: 52px;" class="col-lg-10 info-header">
         <div style="    display: flex; align-items: center;"><img src="Call (1).png" alt=""><span>+51 854
             789-8746</span></div>
@@ -303,7 +324,7 @@
 
 
   <div>
-    <nav class=" container navbar navbar-expand-lg bg-body-tertiary">
+    <nav id="nav" class=" container navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="LOGO.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -347,6 +368,76 @@
       </div>
     </nav>
   </div>
+
+  <div id="nav2" >
+    <nav  class=" container navbar navbar-expand-lg bg-body-tertiary" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="LOGO.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#nosotros">Nosotros</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Configuración y mantenimiento de Servidores</a></li>
+                <li><a class="dropdown-item" href="#">Instalación de cámaras de seguridad</a></li>
+                <li><a class="dropdown-item" href="#">Desarrollo y mantenimiento de Software</a></li>
+                <li><a class="dropdown-item" href="#">Pozos a Tierra</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#clientes">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#contacto">Contacto</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section>
+    <div class="swiper-container-banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://html.themexriver.com/archipark/home-one/assets/img/demo.jpg" alt="">
+        </div>
+        <div class="swiper-slide"><img src="https://www.eutelsat.com/files/Background/banner-iot-towers.jpg" alt="">
+        </div>
+        <div class="swiper-slide"><img src="https://html.themexriver.com/archipark/home-one/assets/img/tst-bg.jpg"
+            alt=""></div>
+        <div class="swiper-slide"><img src="https://html.themexriver.com/archipark/home-two/assets/img/slider-01.png"
+            alt=""></div>
+      </div>
+
+      <!-- Botones de navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Paginación (opcional) -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
 
   <div class="banner" style="display: flex; flex-direction: column;">
 
@@ -415,20 +506,16 @@
               <div class="swiper-wrapper" style="width: 100%; height: 100%;">
 
                 <div class="swiper-slide">
-                  <img src="serv3.png" style="width: 100%; height: 100%; object-fit: cover;"
-                    alt="Imagen 2">
+                  <img src="serv3.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 2">
                 </div>
                 <div class="swiper-slide">
-                  <img src="serv2.png" style="width: 100%; height: 100%; object-fit: cover;"
-                    alt="Imagen 3">
+                  <img src="serv2.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 3">
                 </div>
                 <div class="swiper-slide">
-                  <img src="serv1.png" style="width: 100%; height: 100%; object-fit: cover;"
-                    alt="Imagen 3">
+                  <img src="serv1.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 3">
                 </div>
                 <div class="swiper-slide">
-                  <img src="serv4.png" style="width: 100%; height: 100%; object-fit: cover;"
-                    alt="Imagen 1">
+                  <img src="serv4.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Imagen 1">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -1024,7 +1111,7 @@
 
   <!-- Inicializar Swiper clientes -->
   <script>
-    var swiper = new Swiper('.swiper-container_clientes', {
+    var swiper1 = new Swiper('.swiper-container_clientes', {
       loop: true,
       autoplay: {
         delay: 1000,
@@ -1053,11 +1140,11 @@
   </script>
   <!-- Inicializar Swiper Servicios -->
   <script>
-    var swiper = new Swiper('.swiper-container-serv', {
+    var swiper2 = new Swiper('.swiper-container-serv', {
       slidesPerView: 4, // Valor por defecto para pantallas grandes
       spaceBetween: 30, // Espacio entre las slides
-      freeMode: true, 
-        // Habilitar el modo de desplazamiento libre
+      freeMode: true,
+      // Habilitar el modo de desplazamiento libre
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -1097,8 +1184,8 @@
   </script>
   <!-- Inicializar Swiper Miembros del equipo -->
   <script>
-    var swiper = new Swiper('.swiper-container-miembros', {
-      
+    var swiper3 = new Swiper('.swiper-container-miembros', {
+
       slidesPerView: 4, // Valor por defecto para pantallas grandes
       spaceBetween: 30, // Espacio entre las slides
       freeMode: true,   // Habilitar el modo de desplazamiento libre
@@ -1141,12 +1228,12 @@
   </script>
   <!-- Inicializar Swiper sobre Orcronics -->
   <script>
-    var swiperor = new Swiper('.swiper-container-orcronics', {
+    var swiper4 = new Swiper('.swiper-container-orcronics', {
       loop: true, // Para hacer que el -box sea infinito
-       autoplay: {
-         delay: 3000, // 3 segundos entre cada slide
-         disableOnInteraction: false,
-       },
+      autoplay: {
+        delay: 3000, // 3 segundos entre cada slide
+        disableOnInteraction: false,
+      },
       slidesPerView: 1, // Mostrar solo una imagen por slide
       pagination: {
         el: '.swiper-pagination',
@@ -1157,6 +1244,27 @@
         prevEl: '.swiper-button-prev',
       },
     });
+  </script>
+  <!-- Inicializar Swiper Banner -->
+  <script>
+    const swiper5 = new Swiper('.swiper-container-banner', {
+      // Configuraciones
+      loop: true, // Activar bucle
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500, // Velocidad de auto-reproducción en milisegundos
+        disableOnInteraction: false, // No desactivar cuando el usuario interactúe
+      },
+      speed: 600, // Velocidad de la transición en milisegundos
+    });
+
   </script>
   <!-- Configuracion para cambiar TEMA de la pagina -->
   <script>
@@ -1200,23 +1308,27 @@
   </script>
   <!-- Boton para ir hacia arriba -->
   <script>
-    // Mostrar el botón cuando se desplaza hacia abajo
-    window.onscroll = function () {
-      var scrollBtn = document.getElementById("scrollTopBtn");
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = "block"; // Mostrar botón
-      } else {
-        scrollBtn.style.display = "none"; // Ocultar botón
-      }
-    };
+// Mostrar el botón cuando se desplaza hacia abajo
+window.onscroll = function () {
+  var nav2 = document.getElementById('nav2');
+  var scrollBtn = document.getElementById("scrollTopBtn");
 
-    // Función para volver arriba de la página
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Suaviza el desplazamiento
-      });
-    }
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block"; // Mostrar botón
+    nav2.classList.add('show'); // Agregar la clase que lo hace visible
+  } else {
+    scrollBtn.style.display = "none"; // Ocultar botón
+    nav2.classList.remove('show'); // Quitar la clase para ocultarlo con transición
+  }
+};
+
+// Función para volver arriba de la página
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Suaviza el desplazamiento
+  });
+}
 
   </script>
   <!-- Tranciciones  -->
@@ -1262,7 +1374,7 @@
 
 
 
-  <!-- Estilos para contactanos -->
+<!-- Estilos para contactanos -->
 <style>
   .box-header {
     display: flex;

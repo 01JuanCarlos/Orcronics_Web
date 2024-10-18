@@ -410,6 +410,14 @@ body:before {
 
 
 @media (max-width: 991px) {
+  .swiper-container-banner{
+    height: 200px !important;
+  }
+  .swiper-container-banner .swiper-slide img {
+    height: 100% !important; 
+  }
+
+
   .section-about {
     gap: 30px !important;
   }
@@ -518,6 +526,9 @@ body:before {
 
 @media(max-width: 370px) {
 
+  .theme-toggle {
+    top: 13% !important;
+  }
   .navbar-collapse {
     overflow: hidden;
   }
@@ -745,7 +756,28 @@ body.dark-theme nav .nav-link {
   /* Color al pasar el ratón por encima */
 }
 
+.header-franja{
 
+}
+
+
+/* Estado inicial (cuando el nav está oculto) */
+#nav2 {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: var(--background-color);
+  opacity: 0;
+  transform: translateY(-100%); /* Mueve el nav hacia arriba */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+  top: 0;
+}
+
+/* Estado visible (cuando el nav está visible) */
+#nav2.show {
+  opacity: 1;
+  transform: translateY(0); /* Mueve el nav hacia su posición original */
+}
 
 
 
