@@ -525,9 +525,7 @@ body:before {
   .dropdown {
     width: 100%;
   }
-  .theme-toggle{
-    top: 353px !important;
-  }
+
 
 }
 
@@ -542,9 +540,9 @@ body:before {
   /* Contenedor del interruptor con posición fija y alineado a la derecha */
   .theme-toggle {
     position: fixed;
-    right: 0px;
-    /* Pegado al borde derecho */
-    top: 30%;
+  
+    top: 25%;
+    right: 0 !important;
     /* Centrado verticalmente */
     transform: translateY(-50%);
     /* Centrar correctamente */
@@ -621,7 +619,7 @@ body:before {
     left: 1.5px;
     bottom: 2.5px;
     top: 27px;
-    background-color: #110e0e;
+    background-color: #18192d;
     transition: transform 0.3s, background-color 0.3s;
   }
 
